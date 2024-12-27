@@ -38,22 +38,22 @@ a {
 
 .mantine-Title-root {
     color: var(--mantine-color-zomp);
-    font-size: rem(25px);
+    font-size: 2.5rem;
 
     @media (max-width: 48em) {
-        font-size: rem(50px);
+        /* font-size: rem(50px); */
         line-height: rem(50px);
     }
     @media (min-width: 48em) {
-        font-size: rem(60px);
+        /* font-size: rem(60px); */
         line-height: rem(60px);
     }
     @media (min-width: 75em) {
-        font-size: rem(75px);
+        /* font-size: rem(75px); */
         line-height: rem(70px);
     }
     @media (min-width: 88em) {
-        font-size: rem(90px);
+        /* font-size: rem(90px); */
         line-height: rem(50px);
     }
 }

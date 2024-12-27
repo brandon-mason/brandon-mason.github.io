@@ -8,7 +8,6 @@ import AboutMe from '@/components/AboutMe/AboutMe';
 import Resume from '@/components/Resume/Resume';
 import { useElementSize, useHash, useViewportSize } from '@mantine/hooks';
 
-//TODO: Scroll page to section of id in URI.
 const WholePage: React.FC = () => {
     const [scroll, setScroll] = useState(false);
 	const [selectedSection, setSelectedSection] = useState<React.MutableRefObject<any>>();
@@ -55,7 +54,7 @@ const WholePage: React.FC = () => {
 				scrollbar: classes.scrollbar,
 			}} onScrollPositionChange={(position: { x: number; y: number }) => setScroll((position.y > 0) ? true : false)}>
 				<Header ref={ref} scroll={scroll} refObj={refObj} setSelectedSection={setSelectedSection} setHash={setHash}/>
-				<Container classNames={{root: classes.containerRoot}} miw={'90%'} pr={'10vw'}>
+				<Container classNames={{root: classes.containerRoot}}  pr={''} >
 					<Home ref={refObj.Home} vpWidth={vpWidth} headerHeight={elementHeight} buttonRef={buttonRef} projectRef={refObj.Projects} setSelectedSection={setSelectedSection} setHash={setHash}/>
 					<AboutMe ref={refObj.About} headerHeight={elementHeight}/>
 					<Projects ref={refObj.Projects} headerHeight={elementHeight}/>
