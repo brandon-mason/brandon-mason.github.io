@@ -13,16 +13,16 @@
 .introtext {
     font-size: rem(20px);
 
-    @media (max-width: 48em) {
+    @media (max-width: $mantine-breakpoint-sm) {
         font-size: rem(20px);
     }
-    @media (min-width: 48em) {
+    @media (min-width: $mantine-breakpoint-sm) {
         font-size: rem(25px);
     }
-    @media (min-width: 75em) {
+    @media (min-width: $mantine-breakpoint-lg) {
         font-size: rem(27px);
     }
-    @media (min-width: 88em) {
+    @media (min-width: $mantine-breakpoint-xl) {
         font-size: rem(29px);
     }
 }
@@ -41,7 +41,7 @@
 
 .resumeRoot {
     display: none;
-    @media (max-width: 48em) {
+    @media (max-width: $mantine-breakpoint-sm) {
         display: block;
     }
 }

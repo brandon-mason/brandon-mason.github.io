@@ -12,19 +12,19 @@
     color: var(--mantine-color-zomp);
     font-size: rem(25px);
 
-    @media (max-width: 48em) {
+    @media (max-width: $mantine-breakpoint-sm) {
         font-size: rem(50px);
         line-height: rem(20px);
     }
-    @media (min-width: 48em) {
+    @media (min-width: $mantine-breakpoint-sm) {
         font-size: rem(60px);
         line-height: rem(30px);
     }
-    @media (min-width: 75em) {
+    @media (min-width: $mantine-breakpoint-lg) {
         font-size: rem(75px);
         line-height: rem(45px);
     }
-    @media (min-width: 88em) {
+    @media (min-width: $mantine-breakpoint-xl) {
         font-size: rem(90px);
         line-height: rem(50px);
     }
@@ -33,16 +33,16 @@
 .introtext {
     font-size: rem(20px);
 
-    @media (max-width: 48em) {
+    @media (max-width: $mantine-breakpoint-sm) {
         font-size: rem(23px);
     }
-    @media (min-width: 48em) {
+    @media (min-width: $mantine-breakpoint-sm) {
         font-size: rem(25px);
     }
-    @media (min-width: 75em) {
+    @media (min-width: $mantine-breakpoint-lg) {
         font-size: rem(27px);
     }
-    @media (min-width: 88em) {
+    @media (min-width: $mantine-breakpoint-xl) {
         font-size: rem(29px);
     }
 }
@@ -50,16 +50,16 @@
 .text, .link {
     font-size: rem(18px);
 
-    @media (max-width: 48em) {
+    @media (max-width: $mantine-breakpoint-sm) {
         font-size: rem(20px);
     }
     @media (min-width: 48em) {
         font-size: rem(22px);
     }
-    @media (min-width: 75em) {
+    @media (min-width: $mantine-breakpoint-lg) {
         font-size: rem(23px);
     }
-    @media (min-width: 88em) {
+    @media (min-width: $mantine-breakpoint-xl) {
         font-size: rem(25px);
     }
 }

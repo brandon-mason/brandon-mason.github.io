@@ -6,6 +6,7 @@ import { forwardRef } from 'react';
 interface Link {
     link: string;
     label: string;
+    class: string;
     target?: string;
     scrollIntoView?: (ref: React.MutableRefObject<any>) => void;
     ref?: React.MutableRefObject<any>;
@@ -29,12 +30,12 @@ const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef)
     const [opened, { open, close }] = useDisclosure();
 
     const links: Link[] = [
-        { link: '/#home', label: 'Home', ref: props.refObj.Home },
-        { link: '/#about', label: 'About', ref: props.refObj.About },
-        { link: '/#projects', label: 'Projects', ref: props.refObj.Projects },
-        { link: '/#resume', label: 'Resume', ref: props.refObj.Resume },
-        { link: '/#contact', label: 'Contact Me' },
-        // { link: 'https://docs.google.com/document/d/1AQZoarByG7TqT1GTa6TpMQrMAzRy5fyqJ4XqPzxWmjw/preview', label: 'Resume', target: '_blank' },
+        { link: '/#home', label: 'Home', ref: props.refObj.Home, class: "home" },
+        { link: '/#about', label: 'About Me', ref: props.refObj.About, class: "about-me" },
+        { link: '/#projects', label: 'Projects', ref: props.refObj.Projects, class: "projects" },
+        { link: 'https://docs.google.com/document/d/1AQZoarByG7TqT1GTa6TpMQrMAzRy5fyqJ4XqPzxWmjw/preview', label: 'Resume', class: "resume-link", target: '_blank' },
+        { link: '/#resume', label: 'Resume', ref: props.refObj.Resume, class: "resume" },
+        { link: '/#contact', label: 'Contact Me', class: "contact" },
     ];
 
     const items: JSX.Element[] = links.map((link: Link) => (
@@ -42,7 +43,7 @@ const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef)
         key={link.label}
         href={link.link}
         target={link.target}
-        className={classes.link}
+        className={[classes.link, link.class + "-header"].join(' ')}
         onClick={() => {
             if (link.ref && link.ref.current) {
                 props.setSelectedSection(link.ref);
@@ -60,7 +61,7 @@ const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef)
             <header ref={headerRef} id="header" style={{ boxShadow: (props.scroll) ? 'rgba(0, 0, 0, 0.15) 0px 3px 8px 0px' : 'none' }}>
                 <Container className={classes.inner} fluid >
                     <Group gap={5} visibleFrom="xs">
-                    {items}
+                        {items}
                     </Group>
 
                     <Burger opened={opened} onClick={(opened) ? close : open} hiddenFrom="xs" size="lg" className={classes.burger}/>

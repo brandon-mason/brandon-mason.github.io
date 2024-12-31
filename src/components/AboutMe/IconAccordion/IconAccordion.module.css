@@ -1,8 +1,8 @@
 .iconText {
-    @media (max-width: 48em) {
+    @media (max-width: $mantine-breakpoint-sm) {
         display: block;
     }
-    @media (min-width: 48em) {
+    @media (min-width: $mantine-breakpoint-sm) {
         display: none;
     }
 }
@@ -20,17 +20,17 @@ svg {
 .colRoot {
     text-align: center;
     font-size: 1rem;
-    @media (max-width: 42em) {
+    @media (max-width: $mantine-breakpoint-xs) {
         --col-flex-basis: 33% !important;
         --col-max-width: 33% !important;
         padding-left: 0;
         padding-right: 0;
     }
-    @media (min-width: 42em) {
+    @media (min-width: $mantine-breakpoint-xs) {
         --col-flex-basis: 20% !important;
         --col-max-width: 20% !important;
     }
-    @media (min-width: 48em) {
+    @media (min-width: $mantine-breakpoint-sm) {
         --col-flex-basis: 10% !important;
         --col-max-width: 10% !important;
     }

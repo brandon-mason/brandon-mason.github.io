@@ -22,16 +22,16 @@ a {
     color: var(--text-color);
     font-size: rem(18px);
 
-    @media (max-width: 48em) {
+    @media (max-width: $mantine-breakpoint-sm) {
         font-size: rem(18px);
     }
-    @media (min-width: 48em) {
+    @media (min-width: $mantine-breakpoint-sm) {
         font-size: rem(22px);
     }
-    @media (min-width: 75em) {
+    @media (min-width: $mantine-breakpoint-lg) {
         font-size: rem(23px);
     }
-    @media (min-width: 88em) {
+    @media (min-width: $mantine-breakpoint-xl) {
         font-size: rem(25px);
     }
 }
@@ -40,20 +40,40 @@ a {
     color: var(--mantine-color-zomp);
     font-size: 2.5rem;
 
-    @media (max-width: 48em) {
+    @media (max-width: $mantine-breakpoint-sm) {
         /* font-size: rem(50px); */
         line-height: rem(50px);
     }
-    @media (min-width: 48em) {
+    @media (min-width: $mantine-breakpoint-sm) {
         /* font-size: rem(60px); */
         line-height: rem(60px);
     }
-    @media (min-width: 75em) {
+    @media (min-width: $mantine-breakpoint-lg) {
         /* font-size: rem(75px); */
         line-height: rem(70px);
     }
-    @media (min-width: 88em) {
+    @media (min-width: $mantine-breakpoint-xl) {
         /* font-size: rem(90px); */
         line-height: rem(50px);
     }
+}
+
+.resume-link-header {
+    display: none;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        display: block;
+    }
+}
+
+.resume-header {
+    @media (max-width: $mantine-breakpoint-sm) {
+        display: none;
+    }
+}
+
+a[target="_blank"]::after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin: 0 3px 0 5px;
+    filter: invert(59%) sepia(20%) saturate(692%) hue-rotate(112deg) brightness(87%) contrast(88%);
 }

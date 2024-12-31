@@ -9,13 +9,13 @@ header {
   /* background-color: rgba(var(--mantine-color-cyan-9), .8); */
   transition: box-shadow .25s ease-in-out;
 
-  @media (max-width: 48em) {
+  @media (max-width: $mantine-breakpoint-sm) {
     font-size: rem(20px);
   }
-  @media (min-width: 48em) {
+  @media (min-width: $mantine-breakpoint-sm) {
     font-size: rem(21px);
   }
-  @media (min-width: 75em) {
+  @media (min-width: $mantine-breakpoint-lg) {
     font-size: rem(22px);
 }
 }
@@ -35,7 +35,7 @@ header {
 }
 
 .link {
-  display: block;
+  /* display: block; */
   line-height: 1;
   padding: 8px 12px;
   border-radius: 14px;
