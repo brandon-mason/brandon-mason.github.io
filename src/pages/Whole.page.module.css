@@ -1,9 +1,14 @@
 .containerRoot {
-    /* margin: 0 30px; */
+    margin: 0 2rem;
     padding: 0;
     scroll-margin: 75px;
+
+    @media (max-width: 48em) {
+        padding: 0 0 15vw 0;
+        max-width: 85vw;
     width: min(90vw, 1024px);
     margin: 0 auto;
+    }
 
     /* @media (max-width: $mantine-breakpoint-sm) {
     }

@@ -1,0 +1,54 @@
+.imgRoot {
+    max-width: 100%;
+    height: auto;
+    
+    @media (max-width: 48em) {
+        aspect-ratio: 4/4;
+        width: 100%;
+    }
+    @media (min-width: 48em) {
+        aspect-ratio: 14/9;
+        width: 50%;
+    }
+}
+
+.title {
+    font-size: rem(25px);
+    color: var(--mantine-color-zomp);
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 48em) {
+        font-size: rem(25px);
+        line-height: rem(20px);
+    }
+    @media (min-width: 48em) {
+        font-size: rem(35px);
+        line-height: rem(30px);
+    }
+    /* @media (min-width: 75em) {
+        font-size: rem(75px);
+        line-height: rem(45px);
+    }
+    @media (min-width: 88em) {
+        font-size: rem(90px);
+        line-height: rem(50px);
+    } */
+}
+
+.projInfo {
+    @media (max-width: 48em) {
+        flex-direction: column;
+    }
+    @media (min-width: 48em) {
+        flex-direction: row;
+    }
+}
+
+.textSection {
+    /* margin-left: '1.5rem'; */
+
+    @media (min-width: 48em) {
+        padding-left: 1.5rem;
+    }
+}

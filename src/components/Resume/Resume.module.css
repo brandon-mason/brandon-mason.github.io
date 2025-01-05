@@ -6,7 +6,13 @@
 
 iframe {
     height: 68vh;
+    @media (min-width: 48em) {
+        /* width: 70vw; */
+        /* max-width: 70%; */
+    }
 }
+
+
 
 .resumeRoot {
     @media (max-width: $mantine-breakpoint-xs) {

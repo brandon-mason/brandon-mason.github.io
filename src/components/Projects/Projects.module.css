@@ -3,7 +3,7 @@
 }
 
 .title {
-    font-size: 3.3rem;
+    /* font-size: 3.3rem; */
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -66,4 +66,16 @@
 
 .link {
     color: var(--mantine-color-mint);
+}
+
+.container {
+    /* width: 100vw; */
+    overflow: visible;
+}
+
+.projectsRoot {
+    @media (min-width: 48em) {
+        padding: 0 1vw !important;
+        width: 100vw;
+    }
 }
