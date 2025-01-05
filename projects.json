@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Recordable Midi Piano",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus arcu vel neque efficitur, quis semper purus hendrerit. Nam auctor, nisl sed molestie fermentum, nibh ante molestie urna, non venenatis ex justo a erat.",
+        "image": "project-images/piano.png",
+        "github": "https://github.com",
+        "deployed": "https://deployed.com"
+    },
+    {
+        "id": 2,
+        "name": "Project 2",
+        "description": "This is a project",
+        "image": "https://via.placeholder.com/150",
+        "github": "https://github.com",
+        "deployed": "https://deployed.com"
+    },
+    {
+        "id": 3,
+        "name": "Project 3",
+        "description": "This is a project",
+        "image": "https://via.placeholder.com/150",
+        "github": "https://github.com",
+        "deployed": "https://deployed.com"
+    }
+]
