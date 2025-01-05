@@ -53,7 +53,7 @@ const WholePage: React.FC = () => {
 				thumb: classes.thumb,
 				scrollbar: classes.scrollbar,
 			}} onScrollPositionChange={(position: { x: number; y: number }) => setScroll((position.y > 0) ? true : false)}>
-				<Header ref={ref} scroll={scroll} refObj={refObj} setSelectedSection={setSelectedSection} setHash={setHash}/>
+				<Header ref={ref} scroll={scroll} refObj={refObj} setSelectedSection={setSelectedSection} setHash={setHash} scrollIntoView={scrollIntoView}/>
 				<Container classNames={{root: classes.containerRoot}}  pr={''} >
 					<Home ref={refObj.Home} vpWidth={vpWidth} headerHeight={elementHeight} buttonRef={buttonRef} projectRef={refObj.Projects} setSelectedSection={setSelectedSection} setHash={setHash}/>
 					<AboutMe ref={refObj.About} headerHeight={elementHeight}/>

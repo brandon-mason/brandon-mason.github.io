@@ -23,7 +23,7 @@ interface HeaderProps {
     };
     setSelectedSection: (ref: React.MutableRefObject<any>) => void;
     setHash: (value: string) => void;
-    // scrollIntoView: (ref: React.MutableRefObject<any>) => void;
+    scrollIntoView: (ref: React.MutableRefObject<any>) => void;
 }
 
 const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef) => {
@@ -47,6 +47,7 @@ const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef)
         onClick={() => {
             if (link.ref && link.ref.current) {
                 props.setSelectedSection(link.ref);
+                props.scrollIntoView(link.ref);
                 close();
             }
         }}
