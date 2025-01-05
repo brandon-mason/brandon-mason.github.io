@@ -67,3 +67,12 @@
 .link {
     color: var(--mantine-color-mint);
 }
+
+.container {
+}
+
+.projectsRoot {
+    @media (min-width: 48em) {
+        padding: 0 1vw !important;
+    }
+}

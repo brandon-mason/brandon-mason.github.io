@@ -1,9 +1,33 @@
 .imgRoot {
-    aspect-ratio: 16/9;
+    aspect-ratio: 14/9;
     max-width: 100%;
     height: auto;
 
     @media (min-width: 48em) {
         width: 50%;
     }
+}
+
+.title {
+    font-size: rem(25px);
+    color: var(--mantine-color-zomp);
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 48em) {
+        font-size: rem(25px);
+        line-height: rem(20px);
+    }
+    @media (min-width: 48em) {
+        font-size: rem(35px);
+        line-height: rem(30px);
+    }
+    /* @media (min-width: 75em) {
+        font-size: rem(75px);
+        line-height: rem(45px);
+    }
+    @media (min-width: 88em) {
+        font-size: rem(90px);
+        line-height: rem(50px);
+    } */
 }

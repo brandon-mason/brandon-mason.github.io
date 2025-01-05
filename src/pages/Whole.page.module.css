@@ -4,7 +4,8 @@
     scroll-margin: 75px;
 
     @media (max-width: 48em) {
-        padding: 0 rem(30px);
+        padding: 0 0 15vw 0;
+        max-width: 85vw;
     }
     @media (min-width: 48em) {
         padding: 0 rem(50px);
