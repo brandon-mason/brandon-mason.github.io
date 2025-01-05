@@ -1,9 +1,13 @@
 .imgRoot {
-    aspect-ratio: 14/9;
     max-width: 100%;
     height: auto;
-
+    
+    @media (max-width: 48em) {
+        aspect-ratio: 4/4;
+        width: 100%;
+    }
     @media (min-width: 48em) {
+        aspect-ratio: 14/9;
         width: 50%;
     }
 }
@@ -30,4 +34,21 @@
         font-size: rem(90px);
         line-height: rem(50px);
     } */
+}
+
+.projInfo {
+    @media (max-width: 48em) {
+        flex-direction: column;
+    }
+    @media (min-width: 48em) {
+        flex-direction: row;
+    }
+}
+
+.textSection {
+    /* margin-left: '1.5rem'; */
+
+    @media (min-width: 48em) {
+        padding-left: 1.5rem;
+    }
 }

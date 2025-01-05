@@ -69,10 +69,13 @@
 }
 
 .container {
+    /* width: 100vw; */
+    overflow: visible;
 }
 
 .projectsRoot {
     @media (min-width: 48em) {
         padding: 0 1vw !important;
+        width: 100vw;
     }
 }

@@ -16,15 +16,15 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
     return (
         <>
             <Divider mb={'2rem'} size={1.5} labelPosition='left' color={'var(--mantine-color-zomp)'} label={<Title order={3} className={classes.title}>{props.name}</Title>} />
-            <Stack pb={'2rem'} pl={'1.5rem'}>
-                <Flex wrap='nowrap' dir='column'>
+
+                <Flex wrap='nowrap' pb={'2rem'} className={classes.projInfo}>
                     <Image src={props.image} alt={props.name.toLowerCase().replace(/\s/g, '-')} 
                         style={{ borderRadius: '10px' }} 
                         classNames={{
                             root: classes.imgRoot,
                         }}
                     />
-                    <Stack ml={'1.5rem'}>
+                    <Stack className={classes.textSection}>
                         <Text style={{ verticalAlign: 'top', alignSelf: 'flex-start', textWrap: 'wrap' }}>{props.description}</Text>
                         <Group>
                             <a href={props.github} target="_blank" rel="noreferrer">
@@ -37,7 +37,7 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                         </Group>
                     </Stack>
                 </Flex>
-            </Stack>
+
         </>
     );
 };
