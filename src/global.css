@@ -57,3 +57,27 @@ a {
         line-height: rem(50px);
     }
 }
+
+.resume-link-header {
+    display: none;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        display: block;
+    }
+}
+
+.resume-header {
+    @media (max-width: $mantine-breakpoint-sm) {
+        display: none;
+    }
+}
+
+a[target="_blank"]::after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin: 0 3px 0 5px;
+    filter: invert(59%) sepia(20%) saturate(692%) hue-rotate(112deg) brightness(87%) contrast(88%);
+}
+
+.projectLink:hover {
+    color: var(--mantine-color-viridian) !important;
+}

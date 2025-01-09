@@ -1,17 +1,19 @@
 [
     {
         "id": 1,
-        "name": "Recordable Midi Piano",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus arcu vel neque efficitur, quis semper purus hendrerit. Nam auctor, nisl sed molestie fermentum, nibh ante molestie urna, non venenatis ex justo a erat.",
+        "name": "Recordable Piano",
+        "description": "This project features a piano that can be played using a qwerty keyboard. The keyboard inputs can be recorded, and will be added to a grid in real time, which can be edited using a mouse. The contents of the grid can then be played back to the user. Functionality for saving and loading from a database exists but is not active due to online database restrictions.",
         "image": "project-images/piano.png",
+        "technologies": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
         "github": "https://github.com",
         "deployed": "https://deployed.com"
     },
     {
         "id": 2,
-        "name": "Project 2",
-        "description": "This is a project",
-        "image": "https://via.placeholder.com/150",
+        "name": "Project very cool",
+        "description": "This is a very cool project",
+        "image": "project-images/black.png",
+        "technologies": [""],
         "github": "https://github.com",
         "deployed": "https://deployed.com"
     },
@@ -19,6 +21,7 @@
         "id": 3,
         "name": "Project 3",
         "description": "This is a project",
+        "technologies": [""],
         "image": "https://via.placeholder.com/150",
         "github": "https://github.com",
         "deployed": "https://deployed.com"

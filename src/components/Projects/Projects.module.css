@@ -68,14 +68,18 @@
     color: var(--mantine-color-mint);
 }
 
-.container {
-    /* width: 100vw; */
+.projectsRoot {
     overflow: visible;
+    /* position: relative; */
 }
 
 .projectsRoot {
     @media (min-width: 48em) {
-        padding: 0 1vw !important;
-        width: 100vw;
+        min-width: 90vw;
+        /* padding: 0 1vw !important; */
+        /* width: 100vw; */
     }
+    /* width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%); */
 }
