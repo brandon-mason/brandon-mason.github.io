@@ -1,7 +1,7 @@
 import { Container, MantineComponent, Title, Text, Accordion } from '@mantine/core';
 import { forwardRef } from 'react';
 import classes from './AboutMe.module.css';
-import IconAccordion from './IconAccordion/IconAccordion';
+import IconAccordion from '../IconAccordion/IconAccordion';
 import { useViewportSize } from '@mantine/hooks';
 
 interface AboutMeProps {
