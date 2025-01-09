@@ -4,11 +4,11 @@
     margin: 0;
     padding: 0;
 
-    @media (max-width: 48em) {
+    @media (max-width: 62em) {
         font-size: rem(25px);
         line-height: rem(20px);
     }
-    @media (min-width: 48em) {
+    @media (min-width: 62em) {
         font-size: rem(35px);
         line-height: rem(30px);
     }
@@ -23,16 +23,50 @@
 }
 
 .projInfo {
-    @media (max-width: 48em) {
+    @media (max-width: 75em) {
         flex-direction: column;
+        justify-content: space-between;
     }
-    @media (min-width: 48em) {
+    @media (min-width: 75em) {
         flex-direction: row;
+        /* align-items: center; */
     }
     width: 100%;
+    /* align-items: flex-end; */
+}
+
+.projInfo:nth-child(1) {
+    justify-self: flex-start;
+    margin-bottom: auto;
+    flex-grow: 2;
+
+}
+
+.techStackGrid {
+    flex-basis: auto;
+    /* flex-grow: 1; */
+
+    margin-top: auto;
+}
+
+.techStackGrid:first-child {
+    margin-top: auto;
+}
+
+.projectLinks {
+    flex-basis: auto;
+    /* margin-top: auto; */
+}
+
+.projInfo > * {
+    @media (max-width: 75em) {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .imgContainer {
+    align-self: center;
     flex: 2 1 0;
 
 }
@@ -41,15 +75,15 @@
     /* max-width: 100%; */
     /* height: auto; */
     aspect-ratio: 14/9;
-    align-self: start;
     /* object-fit: contain; */
     
-    @media (max-width: 48em) {
+    @media (max-width: 75em) {
         /* aspect-ratio: 4/4; */
-        width: 100%;
+        justify-self: center;
+        width: 70%;
     }
-    @media (min-width: 48em) {
-        width: 30vw;
+    @media (min-width: 75em) {
+        /* width: 30vw; */
         /* aspect-ratio: 14/9; */
         /* width: 50%; */
     }
@@ -58,10 +92,11 @@
 .textSection {
     /* margin-left: '1.5rem'; */
     
-    @media (min-width: 48em) {
+    @media (min-width: 75em) {
         flex: 3 1 0;
         width: 60vw;
         padding-left: 1.5rem;
+        margin: .5rem 0;
         /* padding-right: 2rem; */
     }
 
@@ -70,7 +105,7 @@
         padding-right: 2rem;
         min-width: 30vw;
     }
-    @media (min-width: 62em) {
+    @media (min-width: 75em) {
         padding-left: 1.5rem;
         padding-right: 2rem;
         min-width: 35vw;
@@ -101,9 +136,11 @@ a[target="_blank"]::after {
     content: none;
 }
 
-.techStackGroup > * {
+.techStackGrid {
+    justify-self: end;
+}
+
+.techStackCol > p {
     font-size: rem(17px) !important;
-    /* color: var(--mantine-color-zomp); */
-    margin: 0;
-    padding: 0;
+
 }

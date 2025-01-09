@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Divider, Flex, Group, Image, Space, Spoiler, Stack, Text, Title } from '@mantine/core';
+import { Container, Divider, Flex, Grid, Group, Image, Space, Spoiler, Stack, Text, Title } from '@mantine/core';
 import classes from './SingleProj.module.css';
 import { SiGithub } from "react-icons/si";
 import { LuExternalLink } from "react-icons/lu";
@@ -18,7 +18,9 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
     const [expanded, setExpanded] = useState(false);
 
     const techList = props.technologies.map((technology: string) => (
-        <Text key={props.id}>{technology}</Text>
+        <Grid.Col span="content">
+            <Text key={props.id}>{technology}</Text>
+        </Grid.Col>
     ));
     
     return (
@@ -33,7 +35,7 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                         }}
                     />
                 </Container>
-                <Stack className={classes.textSection}>
+                <Stack className={classes.textSection} justify='space-between'>
                     <Text visibleFrom='sm' className={classes.description} style={{ verticalAlign: 'top', alignSelf: 'flex-start', textWrap: 'wrap' }}>{props.description}</Text>
                     <Spoiler showLabel='Show More' hideLabel='Hide' hiddenFrom='sm' classNames={{content: classes.spoiler, root: classes.spoilerRoot}}
                         expanded={expanded}
@@ -41,14 +43,17 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                     >
                         <Text className={classes.description}>{props.description}</Text>
                     </Spoiler>
-                    <Group className={classes.techStackGroup}>
+                    <Grid classNames={{
+                        root: classes.techStackGrid,
+                        col: classes.techStackCol,
+                    }} grow>
                         {techList}
-                    </Group>
-                    <Group mt={'auto'}>
+                    </Grid>
+                    <Group className={classes.projectLinks}>
                         <a href={props.github} target="_blank" rel="noreferrer" className='projectLink'>
                             <SiGithub size={35} color='var(--mantine-color-zomp)' className='projectLink' />
                         </a>
-                        <Space />
+                        <Space/>
                         <a href={props.deployed} target="_blank" rel="noreferrer" className='projectLink'>
                             <LuExternalLink size={35} color='var(--mantine-color-zomp)' className='projectLink' />
                         </a>
