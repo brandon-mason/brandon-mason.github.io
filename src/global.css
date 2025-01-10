@@ -77,3 +77,7 @@ a[target="_blank"]::after {
     margin: 0 3px 0 5px;
     filter: invert(59%) sepia(20%) saturate(692%) hue-rotate(112deg) brightness(87%) contrast(88%);
 }
+
+.projectLink:hover {
+    color: var(--mantine-color-viridian) !important;
+}

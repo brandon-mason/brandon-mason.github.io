@@ -9,9 +9,11 @@ interface ProjectProps {
 }
 
 interface Project {
+    id: number;
     name: string;
     description: string;
     image: string;
+    technologies: string[];
     github: string;
     deployed: string;
 }
@@ -19,17 +21,11 @@ interface Project {
 const Projects = forwardRef<MantineComponent<any>, ProjectProps>((props, projectRef) => {
 
     const projectList = projects.map((project: Project) => {
-        return <SingleProj
-            name={project.name}
-            description={project.description}
-            image={project.image}
-            github={project.github}
-            deployed={project.deployed}
-        />
+        return <SingleProj key={project.id} {...project} />
     });
 
     return (
-        <Container mih={'100vh'} ref={projectRef} pt={`calc(${props.headerHeight}px + 1vh`} px={0} ml={0} className={classes.container}>
+        <Container ref={projectRef} pt={`calc(${props.headerHeight}px + 1vh`} px={0} ml={0} classNames={{root: classes.projectsRoot}}>
             <Title order={2} className={classes.title}>Projects</Title>
             <Container p={0} className={classes.projectsRoot} >
                 {projectList}
