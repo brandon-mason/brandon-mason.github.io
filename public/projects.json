@@ -7,23 +7,5 @@
         "technologies": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
         "github": "https://github.com",
         "deployed": "https://deployed.com"
-    },
-    {
-        "id": 2,
-        "name": "Project very cool",
-        "description": "This is a very cool project",
-        "image": "project-images/black.png",
-        "technologies": [""],
-        "github": "https://github.com",
-        "deployed": "https://deployed.com"
-    },
-    {
-        "id": 3,
-        "name": "Project 3",
-        "description": "This is a project",
-        "technologies": [""],
-        "image": "https://via.placeholder.com/150",
-        "github": "https://github.com",
-        "deployed": "https://deployed.com"
     }
 ]
