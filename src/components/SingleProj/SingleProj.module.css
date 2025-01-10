@@ -144,3 +144,14 @@ a[target="_blank"]::after {
     font-size: rem(17px) !important;
 
 }
+
+.techItem {
+    background-color: var(--mantine-color-zomp);
+    border-radius: 10px;
+    text-align: center;
+    margin: .5rem;
+}
+
+.techItem > p {
+    color: var(--mantine-color-mint);
+}
