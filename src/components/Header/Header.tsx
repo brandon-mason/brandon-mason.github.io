@@ -33,7 +33,7 @@ const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef)
         { link: '/#home', label: 'Home', ref: props.refObj.Home, class: "home" },
         { link: '/#about', label: 'About Me', ref: props.refObj.About, class: "about-me" },
         { link: '/#projects', label: 'Projects', ref: props.refObj.Projects, class: "projects" },
-        { link: 'https://docs.google.com/document/d/1AQZoarByG7TqT1GTa6TpMQrMAzRy5fyqJ4XqPzxWmjw/preview', label: 'Resume', class: "resume-link", target: '_blank' },
+        { link: 'Resume.pdf', label: 'Resume', class: "resume-link", target: '_blank' },
         { link: '/#resume', label: 'Resume', ref: props.refObj.Resume, class: "resume" },
         { link: '/#contact', label: 'Contact Me', class: "contact" },
     ];
@@ -65,7 +65,7 @@ const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef)
                         {items}
                     </Group>
 
-                    <Burger opened={opened} onClick={(opened) ? close : open} hiddenFrom="xs" size="lg" className={classes.burger}/>
+                    <Burger opened={opened} onClick={(opened) ? close : open} hiddenFrom="xs" size="lg" color='var(--mantine-color-viridian)' className={classes.burger}/>
 
                 </Container>
                 <Modal opened={opened} onClose={close} withCloseButton={false} yOffset={0} closeOnClickOutside transitionProps={{transition: 'slide-left'}}

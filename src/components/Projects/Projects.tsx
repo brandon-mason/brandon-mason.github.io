@@ -25,7 +25,7 @@ const Projects = forwardRef<MantineComponent<any>, ProjectProps>((props, project
     });
 
     return (
-        <Container ref={projectRef} pt={`calc(${props.headerHeight}px + 1vh`} px={0} ml={0} classNames={{root: classes.projectsRoot}}>
+        <Container ref={projectRef} mih={'100vh'} pt={`calc(${props.headerHeight}px + 1vh`} px={0} ml={0} classNames={{root: classes.projectsRoot}}>
             <Title order={2} className={classes.title}>Projects</Title>
             <Container p={0} className={classes.projectsRoot} >
                 {projectList}

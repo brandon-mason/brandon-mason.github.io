@@ -83,7 +83,7 @@ header {
 }
 
 .modalBody > .link {
-  color: var(--mantine-color-mint);
+  color: var(--mantine-color-viridian);
 }
 
 .modalRoot {
@@ -92,7 +92,7 @@ header {
 }
 
 .modalContent {
-  background-color: var(--mantine-color-viridian);
+  background-color: var(--mantine-color-mint);
 }
 
 .modalInner {
@@ -105,6 +105,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background:
+        /* top, transparent black, faked with gradient */ 
+        linear-gradient(
+          rgba(211, 211, 211, .3), 
+          rgba(211, 211, 211, .3)),
+          var(--mantine-color-mint)
+        
 }
 
 .modalBody {
@@ -116,6 +123,8 @@ header {
 
 .modalOverlay {
   /* opacity: .35 !important; */
+  backdrop-filter: blur(10px);
+  background-color: transparent;
 }
 
 .filler {

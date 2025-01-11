@@ -35,13 +35,19 @@
     color: var(--mantine-color-mint);
 }
 
-.mantine-Button-root {
-    width: rem(300px);
-}
-
 .resumeRoot {
     display: none;
     @media (max-width: $mantine-breakpoint-sm) {
         display: block;
     }
+}
+
+.button {
+    opacity: 1;
+    transition: opacity .09s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--mantine-color-viridian);
+    opacity: 0.8;   
 }

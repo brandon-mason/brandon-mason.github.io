@@ -3,6 +3,7 @@ import { Container, Divider, Flex, Grid, Group, Image, Space, Spoiler, Stack, Te
 import classes from './SingleProj.module.css';
 import { SiGithub } from "react-icons/si";
 import { LuExternalLink } from "react-icons/lu";
+import { useMediaQuery } from '@mantine/hooks';
 
 interface SingleProjProps { 
     id: number;
@@ -16,6 +17,7 @@ interface SingleProjProps {
 
 const SingleProj: React.FC<SingleProjProps> = (props) => {
     const [expanded, setExpanded] = useState(false);
+    const isSm = useMediaQuery('(max-width: 62em)');
 
     const techList = props.technologies.map((technology: string) => (
         <Grid.Col span="content" className={classes.techItem}>
@@ -25,11 +27,16 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
     
     return (
         <>
-            <Divider classNames={{label: classes.divider}} mb={'2rem'} size={1.5} labelPosition='left' color={'var(--mantine-color-zomp)'} label={<Title order={3} className={classes.title}>{props.name}</Title>} />
+            <Divider classNames={{label: classes.divider}} mb={'2rem'} size={1.5} labelPosition={isSm ? 'center' : 'left'} color={'var(--mantine-color-zomp)'} 
+                label={
+                    <Title order={3} className={classes.title}>{props.name}</Title>
+                } 
+            />
             <Flex wrap='nowrap' pb={'2rem'} pr={'1.5rem'} className={classes.projInfo}>
                 <Container className={classes.imgContainer}>
                     <Image src={props.image} alt={props.name.toLowerCase().replace(/\s/g, '-')} 
                         style={{ borderRadius: '10px' }} 
+                        mx='auto'
                         classNames={{
                             root: classes.imgRoot,
                         }}
