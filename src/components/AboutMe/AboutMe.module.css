@@ -11,3 +11,40 @@
 .mantine-SimpleGrid-root {
     justify-content: center;
 }
+
+.root {
+    @media (max-width: 62em) {
+        /* min-width: 90vw; */
+        width: auto;
+        /* padding: 0 1vw !important; */
+        /* width: 100vw; */
+    }
+    @media (min-width: 62em) {
+        min-width: 90vw;
+        /* padding: 0 1vw !important; */
+        /* width: 100vw; */
+    }
+}
+
+.selfImage {
+    border-radius: 10px;
+    width: 25%;
+    margin: 0 auto;
+    display: block;
+
+    @media (max-width: 62em) {
+        width: 70%;
+    }
+    @media (min-width: 62em) {
+        width: 25%;
+    }
+}
+
+.techGroup {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.techList {
+    color: var(--text-color);
+}
