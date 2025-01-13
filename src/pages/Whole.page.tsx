@@ -26,8 +26,8 @@ const WholePage: React.FC = () => {
 				"Resume":resumeRef,
 			};
 	const { height: vpHeight, width: vpWidth } = useViewportSize();
-	const { ref, width: elementWidth, height: elementHeight } = useElementSize();
-    const isMd = useMediaQuery('(max-width: 62em)');
+	const { ref, width: headerWidth, height: headerHeight } = useElementSize();
+    const isMdWidth = useMediaQuery('(max-width: 62em)');
 
 	const scrollIntoView = (ref: React.MutableRefObject<any>) => {
 		if (ref.current && scrollareaRef.current) {
@@ -55,11 +55,11 @@ const WholePage: React.FC = () => {
 				scrollbar: classes.scrollbar,
 			}} onScrollPositionChange={(position: { x: number; y: number }) => setScroll((position.y > 0) ? true : false)}>
 				<Header ref={ref} scroll={scroll} refObj={refObj} setSelectedSection={setSelectedSection} setHash={setHash} scrollIntoView={scrollIntoView}/>
-				<Container classNames={{root: classes.containerRoot}}  pr={''} >
-					<Home ref={refObj.Home} vpWidth={vpWidth} headerHeight={elementHeight} buttonRef={buttonRef} projectRef={refObj.Projects} setSelectedSection={setSelectedSection} scrollIntoView={scrollIntoView} setHash={setHash}/>
-					<AboutMe ref={refObj.About} headerHeight={elementHeight} isMd={isMd}/>
-					<Projects ref={refObj.Projects} headerHeight={elementHeight} isMd={isMd}/>
-					<Resume ref={refObj.Resume} headerHeight={elementHeight}/>
+				<Container classNames={{root: classes.containerRoot}} pr={''} >
+					<Home ref={refObj.Home} vpWidth={vpWidth} headerHeight={headerHeight} buttonRef={buttonRef} projectRef={refObj.Projects} setSelectedSection={setSelectedSection} scrollIntoView={scrollIntoView} setHash={setHash}/>
+					<AboutMe ref={refObj.About} headerHeight={headerHeight} vpHeight={vpHeight} isMdWidth={isMdWidth}/>
+					<Projects ref={refObj.Projects} headerHeight={headerHeight} isMdWidth={isMdWidth} vpHeight={vpHeight}/>
+					<Resume ref={refObj.Resume} headerHeight={headerHeight}/>
 				</Container>
 			</ScrollArea>
 		</>

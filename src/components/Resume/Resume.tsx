@@ -8,7 +8,7 @@ interface ResumeProps {
 
 const Resume = forwardRef<MantineComponent<any>, ResumeProps>((props, resumeRef) => {
     return (
-        <Container mih={'100vh'} pt={`calc(${props.headerHeight}px + 1vh`} px={0} mx={0} ref={resumeRef} className='resume-container' classNames={{root: classes.resumeRoot}}>
+        <Container pt={`calc(${props.headerHeight}px + 1vh`} px={0} mx={0} ref={resumeRef} className='resume-container' classNames={{root: classes.resumeRoot}}>
             <Title order={2} className={classes.title}>Resume</Title>
             <Anchor href='Resume.pdf' target='_blank'>Link</Anchor>
             <Box visibleFrom='xs' mih={'68vh'}>

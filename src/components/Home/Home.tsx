@@ -16,8 +16,8 @@ const Home = forwardRef<MantineComponent<any>, HomeProps>((props, homeRef) => {
 
     return (
         <Flex
-            mih={'100vh'}
             ref={homeRef}
+            className={classes.root}
         >
             <Stack classNames={classes}
                 justify="center"

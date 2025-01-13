@@ -19,6 +19,12 @@ a {
     color: var(--mantine-color-mint);
 }
 
+/* .mantine-Container-root {
+    @media (max-height: 48em) {
+        max-height: 30vh; 
+    }
+} */
+
 .mantine-Text-root {
     color: var(--text-color);
     font-size: rem(18px);

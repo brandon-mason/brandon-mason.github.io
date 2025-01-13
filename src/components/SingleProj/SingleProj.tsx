@@ -13,7 +13,7 @@ interface SingleProjProps {
     technologies: string[];
     github: string;
     deployed: string; 
-    isMd: boolean | undefined;
+    isMdWidth: boolean | undefined;
 }
 
 const SingleProj: React.FC<SingleProjProps> = (props) => {
@@ -27,7 +27,7 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
     
     return (
         <>
-            <Divider classNames={{label: classes.divider}} mb={'2rem'} size={1.5} labelPosition={props.isMd ? 'center' : 'left'} color={'var(--mantine-color-zomp)'} 
+            <Divider classNames={{label: classes.divider}} mb={'2rem'} size={1.5} labelPosition={props.isMdWidth ? 'center' : 'left'} color={'var(--mantine-color-zomp)'} 
                 label={
                     <Title order={3} className={classes.title}>{props.name}</Title>
                 } 

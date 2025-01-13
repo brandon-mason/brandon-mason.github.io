@@ -1,107 +1,42 @@
 import { Container, MantineComponent, Title, Text, Accordion, Group, Image, Stack, List, ListItem } from '@mantine/core';
-import { forwardRef, useEffect } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
 import classes from './AboutMe.module.css';
 import IconAccordion from '../IconAccordion/IconAccordion';
 import { useViewportSize } from '@mantine/hooks';
 import techItems from '../../../public/technologies.json';
+import { comma } from 'postcss/lib/list';
 
 interface AboutMeProps {
     headerHeight: number;
-    isMd: boolean | undefined;
+    vpHeight: number;
+    isMdWidth: boolean | undefined;
 }
 
-const AboutMe = forwardRef<MantineComponent<any>, AboutMeProps>((props, aboutRef) => {
-    // const techItems = [
-    //     "React",
-    //     "HTML5",
-    //     "TypeScript",
-    //     "CSS3",
-    //     "Mantine",
-    //     "C++",
-    //     "Java",
-    //     "MongoDB",
-    //     "MySQL",
-    //     "Git",
-    // ];
-    
-    const techLists: JSX.Element[] = [];
+const AboutMe = forwardRef<MantineComponent<any>, AboutMeProps>((props, aboutRef: React.ForwardedRef<any>) => {
+    const [combinedHeight, setCombinedHeight] = useState(0);
 
-    // const techItemArrays: JSX.Element[][] = [
-    //     techItems.slice(0, techItems.length / 2).map((tech, i) => (
-    //         <ListItem key={i}>{tech}</ListItem>
-    //     )),
-    //     techItems.slice(techItems.length / 2).map((tech, i) => (
-    //         <ListItem key={i}>{tech}</ListItem>
-    //     )),
-    // ];
-    const techItemArrays: JSX.Element[][] = [];
-
-
-    // useEffect(() => {
-    //     // if(props.isMd) {
-    //     //     techItemArrays.map((techItemArray, i) => {
-    //     //         techLists.push(<List>
-    //     //             {techItemArrays[0]}
-    //     //         </List>);
-    //     //     })
-    //     //     };
-    //     //     console.log(techLists);
-    //     let listCounter = 0;
-
-    //     const techItems = [
-    //         "React",
-    //         "HTML5",
-    //         "TypeScript",
-    //         "CSS3",
-    //         "Mantine",
-    //         "C++",
-    //         "Java",
-    //         "MongoDB",
-    //         "MySQL",
-    //         "Git",
-    //     ];
-
-    //     const techItemArrays: JSX.Element[][] = [];
-
-    //     if(props.isMd) {
-    //         techItems.forEach((item, i) => {
-    //             console.log(listCounter);
-    //             techItemArrays[listCounter].push(<ListItem key={i}>{item}</ListItem>);
-    //             if(listCounter === 0 && i >= techItems.length / 2 - 1) {
-    //                 listCounter++;
-    //             }
-    //         });
-    //     }
-    //     console.log(techItemArrays);
-    //     console.log(props.isMd);
-    // }, [props.isMd]);
+    useEffect(() => {
+        const currentRef = (aboutRef as React.MutableRefObject<any>).current;
+        if (currentRef) {
+            const children = currentRef.children;
+            let totalHeight = 0;
+            for (let i = 0; i < children.length; i++) {
+                totalHeight += children[i].clientHeight;
+            }
+            setCombinedHeight(totalHeight);
+        }
+    }, []);
 
     const createList = (rows: number) => {
         let listCounter = 0;
-
-        // const techItems = [
-        //     "React",
-        //     "HTML5",
-        //     "TypeScript",
-        //     "CSS3",
-        //     "Mantine",
-        //     "C++",
-        //     "Java",
-        //     "MongoDB",
-        //     "MySQL",
-        //     "Git",
-        //     "Github",
-        //     "VS Code",
-        // ];
-
         const techItemArrays: JSX.Element[][] = [];
+
         for(let i = 0; i < rows; i++) {
             techItemArrays.push([]);
         }
 
-        // if(props.isMd) {
+        // if(props.isMdWidth) {
             techItems.forEach((item, i) => {
-                console.log(techItemArrays[listCounter]);
                 techItemArrays[listCounter].push(<ListItem key={i}>{item}</ListItem>);
                 if(listCounter === 0 && i >= techItems.length / 2 - 1) {
                     listCounter++;
@@ -109,7 +44,7 @@ const AboutMe = forwardRef<MantineComponent<any>, AboutMeProps>((props, aboutRef
             });
         // }
         // console.log(techItemArrays);
-        // console.log(props.isMd);
+        // console.log(props.isMdWidth);
 
         return techItemArrays.map((array, i) => 
             <List key={i} className={classes.techList}>
@@ -119,7 +54,20 @@ const AboutMe = forwardRef<MantineComponent<any>, AboutMeProps>((props, aboutRef
 
 
     return (
-        <Container className={classes.root} mih={'90vh'} pt={`calc(${props.headerHeight}px + 1vh`} px={0} ml={0} ref={aboutRef}>
+        <Container className={classes.root} 
+            // mih='100vh'
+            mih={
+                (() => {
+                    const currentRef = (aboutRef as React.MutableRefObject<any>).current;
+                    if (currentRef) {
+                        console.log(currentRef.clientHeight);
+                        console.log(props.vpHeight);
+                        return (props.vpHeight > combinedHeight) ? `${combinedHeight * ( 1 - props.vpHeight)}px` : '100vh' ;
+                    }
+                    return 'auto';
+                })()
+            } 
+            pt={`calc(${props.headerHeight}px + 1vh`} px={0} ml={0} ref={aboutRef}>
             <Title order={2} className={classes.title}>About Me</Title>
             <Group align='flex-start'>
                 <Stack className={classes.infoSection}>
@@ -153,7 +101,7 @@ const AboutMe = forwardRef<MantineComponent<any>, AboutMeProps>((props, aboutRef
                 </List> */}
                 <List className={classes.techLists}>
                     {
-                        createList((props.isMd ? 2 : 4))
+                        createList((props.isMdWidth ? 2 : 4))
                     }
                 </List>
                 {/* <List className={classes.techList}>
