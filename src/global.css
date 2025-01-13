@@ -24,7 +24,7 @@ a {
     font-size: rem(18px);
 
     @media (max-width: $mantine-breakpoint-sm) {
-        font-size: rem(18px);
+        font-size: rem(17px);
     }
     @media (min-width: $mantine-breakpoint-sm) {
         font-size: rem(22px);

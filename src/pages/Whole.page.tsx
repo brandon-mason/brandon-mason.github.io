@@ -6,7 +6,7 @@ import { useEffect, useState, useRef } from 'react';
 import Projects from '@/components/Projects/Projects';
 import AboutMe from '@/components/AboutMe/AboutMe';
 import Resume from '@/components/Resume/Resume';
-import { useElementSize, useHash, useViewportSize } from '@mantine/hooks';
+import { useElementSize, useHash, useMediaQuery, useViewportSize } from '@mantine/hooks';
 
 const WholePage: React.FC = () => {
     const [scroll, setScroll] = useState(false);
@@ -27,6 +27,7 @@ const WholePage: React.FC = () => {
 			};
 	const { height: vpHeight, width: vpWidth } = useViewportSize();
 	const { ref, width: elementWidth, height: elementHeight } = useElementSize();
+    const isMd = useMediaQuery('(max-width: 62em)');
 
 	const scrollIntoView = (ref: React.MutableRefObject<any>) => {
 		if (ref.current && scrollareaRef.current) {
@@ -56,8 +57,8 @@ const WholePage: React.FC = () => {
 				<Header ref={ref} scroll={scroll} refObj={refObj} setSelectedSection={setSelectedSection} setHash={setHash} scrollIntoView={scrollIntoView}/>
 				<Container classNames={{root: classes.containerRoot}}  pr={''} >
 					<Home ref={refObj.Home} vpWidth={vpWidth} headerHeight={elementHeight} buttonRef={buttonRef} projectRef={refObj.Projects} setSelectedSection={setSelectedSection} scrollIntoView={scrollIntoView} setHash={setHash}/>
-					<AboutMe ref={refObj.About} headerHeight={elementHeight}/>
-					<Projects ref={refObj.Projects} headerHeight={elementHeight}/>
+					<AboutMe ref={refObj.About} headerHeight={elementHeight} isMd={isMd}/>
+					<Projects ref={refObj.Projects} headerHeight={elementHeight} isMd={isMd}/>
 					<Resume ref={refObj.Resume} headerHeight={elementHeight}/>
 				</Container>
 			</ScrollArea>

@@ -13,11 +13,11 @@ interface SingleProjProps {
     technologies: string[];
     github: string;
     deployed: string; 
+    isMd: boolean | undefined;
 }
 
 const SingleProj: React.FC<SingleProjProps> = (props) => {
     const [expanded, setExpanded] = useState(false);
-    const isSm = useMediaQuery('(max-width: 62em)');
 
     const techList = props.technologies.map((technology: string) => (
         <Grid.Col span="content" className={classes.techItem}>
@@ -27,7 +27,7 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
     
     return (
         <>
-            <Divider classNames={{label: classes.divider}} mb={'2rem'} size={1.5} labelPosition={isSm ? 'center' : 'left'} color={'var(--mantine-color-zomp)'} 
+            <Divider classNames={{label: classes.divider}} mb={'2rem'} size={1.5} labelPosition={props.isMd ? 'center' : 'left'} color={'var(--mantine-color-zomp)'} 
                 label={
                     <Title order={3} className={classes.title}>{props.name}</Title>
                 } 
@@ -44,7 +44,7 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                 </Container>
                 <Stack className={classes.textSection} justify='space-between'>
                     <Text visibleFrom='sm' className={classes.description} style={{ verticalAlign: 'top', alignSelf: 'flex-start', textWrap: 'wrap' }}>{props.description}</Text>
-                    <Spoiler showLabel='Show More' hideLabel='Hide' hiddenFrom='sm' classNames={{content: classes.spoiler, root: classes.spoilerRoot}}
+                    <Spoiler maxHeight={120} showLabel='Show More' hideLabel='Hide' hiddenFrom='sm' classNames={{content: classes.spoiler, root: classes.spoilerRoot}}
                         expanded={expanded}
                         onExpandedChange={setExpanded}
                     >

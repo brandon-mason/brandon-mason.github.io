@@ -6,6 +6,7 @@ import projects from '../../../public/projects.json';
 
 interface ProjectProps {
     headerHeight: number;
+    isMd?: boolean | undefined;
 }
 
 interface Project {
@@ -21,7 +22,7 @@ interface Project {
 const Projects = forwardRef<MantineComponent<any>, ProjectProps>((props, projectRef) => {
 
     const projectList = projects.map((project: Project) => {
-        return <SingleProj key={project.id} {...project} />
+        return <SingleProj key={project.id} isMd={props.isMd} {...project} />
     });
 
     return (
