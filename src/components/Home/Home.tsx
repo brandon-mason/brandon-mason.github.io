@@ -8,9 +8,6 @@ interface HomeProps {
     isLgHeight: boolean | undefined;
     buttonRef: React.MutableRefObject<any>;
     projectRef: React.MutableRefObject<any>;
-    setSelectedSection: (ref: React.MutableRefObject<any>) => void;
-    scrollIntoView: (ref: React.MutableRefObject<any>) => void;
-    setHash: (value: string) => void;
 }
 
 const Home = forwardRef<MantineComponent<any>, HomeProps>((props, homeRef) => {
@@ -40,20 +37,17 @@ const Home = forwardRef<MantineComponent<any>, HomeProps>((props, homeRef) => {
                     </Text>
                     <Text classNames={{root: classes.resumeRoot}} > You can view my <Anchor href='Resume.pdf' target='_blank'>resume here</Anchor>.</Text>
                 </Box>
-                <Button 
-                    color={'var(--mantine-color-viridian)'} 
-                    className={classes.button}
-                    size='md'
-                    style={{width: '40%', minWidth: '260px', color: 'var(--mantine-color-mint)', position: 'static'}}
-                    ref={props.buttonRef}
-                    onClick={() => {
-                        props.setSelectedSection(props.projectRef);
-                        props.scrollIntoView(props.projectRef);
-                        close();
-                    }}
-                >
-                    Check out some of my work!
-                </Button>
+                <a href={'#projects'}>
+                    <Button 
+                        color={'var(--mantine-color-viridian)'} 
+                        className={classes.button}
+                        size='md'
+                        style={{width: '40%', minWidth: '260px', color: 'var(--mantine-color-mint)', position: 'static'}}
+                        ref={props.buttonRef}
+                    >
+                        Check out some of my work!
+                    </Button>
+                </a>
             </Stack>
         </Flex>
     );

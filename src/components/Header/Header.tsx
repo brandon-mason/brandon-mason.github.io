@@ -8,22 +8,18 @@ interface Link {
     label: string;
     class: string;
     target?: string;
-    scrollIntoView?: (ref: React.MutableRefObject<any>) => void;
     ref?: React.MutableRefObject<any>;
 }
 
 interface HeaderProps {
     ref: React.MutableRefObject<any>;
-    scroll: boolean;
+    scrollState: boolean;
     refObj: {
         Home: React.MutableRefObject<any>;
         About: React.MutableRefObject<any>;
         Projects: React.MutableRefObject<any>;
         Resume: React.MutableRefObject<any>;
     };
-    setSelectedSection: (ref: React.MutableRefObject<any>) => void;
-    setHash: (value: string) => void;
-    scrollIntoView: (ref: React.MutableRefObject<any>) => void;
 }
 
 const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef) => {
@@ -40,26 +36,19 @@ const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef)
 
     const items: JSX.Element[] = links.map((link: Link) => (
         <a
-        key={link.class}
-        href={link.link}
-        target={link.target}
-        className={[classes.link, link.class + "-header"].join(' ')}
-        onClick={() => {
-            if (link.ref && link.ref.current) {
-                props.setSelectedSection(link.ref);
-                props.scrollIntoView(link.ref);
-                close();
-            }
-        }}
+            key={link.class}
+            href={link.link}
+            target={link.target}
+            className={[classes.link, link.class + "-header"].join(' ')}
         >
-        {link.label}
+            {link.label}
         </a>
         
     ));
 
     return (
         <>
-            <header ref={headerRef} id="header" style={{ boxShadow: (props.scroll) ? 'rgba(0, 0, 0, 0.15) 0px 3px 8px 0px' : 'none' }}>
+            <header ref={headerRef} id="header" style={{ boxShadow: (props.scrollState) ? 'rgba(0, 0, 0, 0.15) 0px 3px 8px 0px' : 'none' }}>
                 <Container className={classes.inner} fluid >
                     <Group gap={5} visibleFrom="xs">
                         {items}
