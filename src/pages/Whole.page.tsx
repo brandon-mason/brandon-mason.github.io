@@ -7,6 +7,7 @@ import Projects from '@/components/Projects/Projects';
 import AboutMe from '@/components/AboutMe/AboutMe';
 import Resume from '@/components/Resume/Resume';
 import { useElementSize, useHash, useMediaQuery, useViewportSize } from '@mantine/hooks';
+import ScrollArrow from '@/components/ScrollArrow/ScrollArrow';
 
 const WholePage: React.FC = () => {
     const [scroll, setScroll] = useState(false);
@@ -63,6 +64,7 @@ const WholePage: React.FC = () => {
 					<Resume ref={refObj.Resume} headerHeight={headerHeight}/>
 				</Container>
 			</ScrollArea>
+			<ScrollArrow scroll={scroll}/>
 		</>
 	);
 }

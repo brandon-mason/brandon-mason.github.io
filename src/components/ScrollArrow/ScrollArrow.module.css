@@ -1,0 +1,40 @@
+.arrowContainer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.downArrow {
+    z-index: 1;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+    color: var(--mantine-color-viridian);
+    font-size: 2.5rem;
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+        display: block;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.disappear { 
+    animation: disappear 0.5s forwards;
+    /* animation-iteration-count: 1; */
+}
