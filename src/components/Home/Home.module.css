@@ -4,6 +4,13 @@
 
 .root {
     min-height: 100vh;
+
+    @media (max-width: $mantine-breakpoint-lg) {
+        min-height: auto;
+    }
+    /* @media (max-height: 62em) and (min-height: 48em) {
+        min-height: auto;
+    } */
 }
 
 .title {
@@ -36,10 +43,11 @@
 }
 
 .resumeRoot {
-    display: none;
+    /* display: none;
     @media (max-width: $mantine-breakpoint-sm) {
         display: block;
-    }
+    } */
+    line-height: 2.3;
 }
 
 .button {

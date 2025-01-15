@@ -40,7 +40,7 @@ const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef)
 
     const items: JSX.Element[] = links.map((link: Link) => (
         <a
-        key={link.label}
+        key={link.class}
         href={link.link}
         target={link.target}
         className={[classes.link, link.class + "-header"].join(' ')}

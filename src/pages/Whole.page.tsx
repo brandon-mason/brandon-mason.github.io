@@ -28,6 +28,7 @@ const WholePage: React.FC = () => {
 	const { height: vpHeight, width: vpWidth } = useViewportSize();
 	const { ref, width: headerWidth, height: headerHeight } = useElementSize();
     const isMdWidth = useMediaQuery('(max-width: 62em)');
+    const isLgHeight = useMediaQuery('(max-width: 75em)');
 
 	const scrollIntoView = (ref: React.MutableRefObject<any>) => {
 		if (ref.current && scrollareaRef.current) {
@@ -49,14 +50,14 @@ const WholePage: React.FC = () => {
 
 	return (
 		<>
-			<ScrollArea type="auto" scrollbarSize={8} ref={scrollareaRef} classNames={{
+			<ScrollArea ref={scrollareaRef} type="auto" scrollbarSize={8} classNames={{
 				root: classes.root,
 				thumb: classes.thumb,
 				scrollbar: classes.scrollbar,
 			}} onScrollPositionChange={(position: { x: number; y: number }) => setScroll((position.y > 0) ? true : false)}>
 				<Header ref={ref} scroll={scroll} refObj={refObj} setSelectedSection={setSelectedSection} setHash={setHash} scrollIntoView={scrollIntoView}/>
 				<Container classNames={{root: classes.containerRoot}} pr={''} >
-					<Home ref={refObj.Home} vpWidth={vpWidth} headerHeight={headerHeight} buttonRef={buttonRef} projectRef={refObj.Projects} setSelectedSection={setSelectedSection} scrollIntoView={scrollIntoView} setHash={setHash}/>
+					<Home ref={refObj.Home} vpWidth={vpWidth} headerHeight={headerHeight} isLgHeight={isLgHeight} buttonRef={buttonRef} projectRef={refObj.Projects} setSelectedSection={setSelectedSection} scrollIntoView={scrollIntoView} setHash={setHash}/>
 					<AboutMe ref={refObj.About} headerHeight={headerHeight} vpHeight={vpHeight} isMdWidth={isMdWidth}/>
 					<Projects ref={refObj.Projects} headerHeight={headerHeight} isMdWidth={isMdWidth} vpHeight={vpHeight}/>
 					<Resume ref={refObj.Resume} headerHeight={headerHeight}/>

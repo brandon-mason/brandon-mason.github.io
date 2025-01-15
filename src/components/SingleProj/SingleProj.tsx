@@ -20,7 +20,7 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
     const [expanded, setExpanded] = useState(false);
 
     const techList = props.technologies.map((technology: string) => (
-        <Grid.Col span="content" className={classes.techItem}>
+        <Grid.Col key={technology} span="content" className={classes.techItem}>
             <Text key={props.id}>{technology}</Text>
         </Grid.Col>
     ));

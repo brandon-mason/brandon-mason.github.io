@@ -65,12 +65,12 @@
 
 .techList {
     color: var(--text-color);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     max-width: max-content;
     margin: 0 auto;
 
     @media (max-width: 48em) {
-        font-size: 0.95rem;
+        /* font-size: 0.95rem; */
     }
 }
 

@@ -2,7 +2,7 @@ import { MantineComponent, Container, Title } from '@mantine/core';
 import classes from './Projects.module.css';
 import { forwardRef, useEffect, useState } from 'react';
 import SingleProj from '../SingleProj/SingleProj';
-import projects from '../../../public/projects.json';
+import projects from './projects.json';
 
 interface ProjectProps {
     headerHeight: number;

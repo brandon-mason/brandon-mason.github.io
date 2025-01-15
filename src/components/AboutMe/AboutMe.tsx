@@ -3,7 +3,7 @@ import { forwardRef, useEffect, useState } from 'react';
 import classes from './AboutMe.module.css';
 import IconAccordion from '../IconAccordion/IconAccordion';
 import { useViewportSize } from '@mantine/hooks';
-import techItems from '../../../public/technologies.json';
+import techItems from './technologies.json';
 import { comma } from 'postcss/lib/list';
 
 interface AboutMeProps {
@@ -34,18 +34,12 @@ const AboutMe = forwardRef<MantineComponent<any>, AboutMeProps>((props, aboutRef
         for(let i = 0; i < rows; i++) {
             techItemArrays.push([]);
         }
-
-        // if(props.isMdWidth) {
             techItems.forEach((item, i) => {
                 techItemArrays[listCounter].push(<ListItem key={i}>{item}</ListItem>);
                 if(listCounter === 0 && i >= techItems.length / 2 - 1) {
                     listCounter++;
                 }
             });
-        // }
-        // console.log(techItemArrays);
-        // console.log(props.isMdWidth);
-
         return techItemArrays.map((array, i) => 
             <List key={i} className={classes.techList}>
                 {array}
@@ -55,13 +49,10 @@ const AboutMe = forwardRef<MantineComponent<any>, AboutMeProps>((props, aboutRef
 
     return (
         <Container className={classes.root} 
-            // mih='100vh'
             mih={
                 (() => {
                     const currentRef = (aboutRef as React.MutableRefObject<any>).current;
                     if (currentRef) {
-                        console.log(currentRef.clientHeight);
-                        console.log(props.vpHeight);
                         return (props.vpHeight > combinedHeight) ? `${combinedHeight * ( 1 - props.vpHeight)}px` : '100vh' ;
                     }
                     return 'auto';
@@ -82,31 +73,16 @@ const AboutMe = forwardRef<MantineComponent<any>, AboutMeProps>((props, aboutRef
                         will go, and am excited to have the opportunity to experiment with any new technologies.
 
                     </Text>
-                    {/* <IconAccordion/> */}
                 </Stack>
                 <Image src='self-portrait.jpg' className={classes.selfImage}/>
             </Group>
             <Container className={classes.listContainer}>
                 <Text className={classes.listContText} style={{textAlign: 'center'}}>Here are a few of the technologies that I'm proficient in:</Text>
-                {/* <Group className={classes.techGroup} visibleFrom='sm'>
-                    {techLists}
-                </Group> */}
-                {/* <List className={classes.techList}>
-                    {
-                        techItemArrays.map(array => 
-                            <List>
-                                {array}
-                            </List>
-                    )}
-                </List> */}
                 <List className={classes.techLists}>
                     {
                         createList((props.isMdWidth ? 2 : 4))
                     }
                 </List>
-                {/* <List className={classes.techList}>
-                    {techLists}
-                </List> */}
             </Container>
         </Container>
     );

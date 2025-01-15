@@ -82,7 +82,7 @@
         /* width: 100vw; */
     }
     @media (min-width: 62em) {
-        /* min-width: 90vw; */
+        min-width: 90vw;
         /* padding: 0 1vw !important; */
         /* width: 100vw; */
     }

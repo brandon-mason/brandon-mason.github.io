@@ -5,6 +5,7 @@ import { forwardRef } from 'react';
 interface HomeProps {
     vpWidth: number;
     headerHeight: number;
+    isLgHeight: boolean | undefined;
     buttonRef: React.MutableRefObject<any>;
     projectRef: React.MutableRefObject<any>;
     setSelectedSection: (ref: React.MutableRefObject<any>) => void;
@@ -18,6 +19,7 @@ const Home = forwardRef<MantineComponent<any>, HomeProps>((props, homeRef) => {
         <Flex
             ref={homeRef}
             className={classes.root}
+            pt={props.isLgHeight ? `calc(${props.headerHeight}px + 1vh)` : ''}
         >
             <Stack classNames={classes}
                 justify="center"
@@ -36,7 +38,7 @@ const Home = forwardRef<MantineComponent<any>, HomeProps>((props, homeRef) => {
                     and will be graduating in December of 2025. Most of my projects are web based but I am well versed in many other 
                     languages such as C++ and Java.
                     </Text>
-                    <Text classNames={{root: classes.resumeRoot}} > You can view my <Anchor href='https://docs.google.com/document/d/1AQZoarByG7TqT1GTa6TpMQrMAzRy5fyqJ4XqPzxWmjw/preview' target='_blank'>resume here</Anchor></Text>
+                    <Text classNames={{root: classes.resumeRoot}} > You can view my <Anchor href='Resume.pdf' target='_blank'>resume here</Anchor>.</Text>
                 </Box>
                 <Button 
                     color={'var(--mantine-color-viridian)'} 
