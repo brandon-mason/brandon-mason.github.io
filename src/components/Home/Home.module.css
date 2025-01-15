@@ -59,3 +59,11 @@
     background-color: var(--mantine-color-viridian);
     opacity: 0.8;   
 }
+
+.resumeRoot, .githubRoot {
+    line-height: 0.3;
+}
+
+.resumeRoot {
+    margin-top: 1rem;
+}

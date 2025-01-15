@@ -35,14 +35,15 @@ const Home = forwardRef<MantineComponent<any>, HomeProps>((props, homeRef) => {
                     and will be graduating in December of 2025. Most of my projects are web based but I am well versed in many other 
                     languages such as C++ and Java.
                     </Text>
-                    <Text classNames={{root: classes.resumeRoot}} > You can view my <Anchor href='Resume.pdf' target='_blank'>resume here</Anchor>.</Text>
+                    <Text classNames={{root: classes.resumeRoot}} > You can view my <Anchor href='Resume.pdf' target='_blank'>resume here</Anchor>,</Text>
+                    <Text classNames={{root: classes.githubRoot}} > and my <Anchor href='https://github.com/brandon-mason' target='_blank'>GitHub here</Anchor>.</Text>
                 </Box>
                 <a href={'#projects'}>
                     <Button 
                         color={'var(--mantine-color-viridian)'} 
                         className={classes.button}
                         size='md'
-                        style={{width: '40%', minWidth: '260px', color: 'var(--mantine-color-mint)', position: 'static'}}
+                        style={{width: '40%', minWidth: '300px', color: 'var(--mantine-color-mint)', position: 'static'}}
                         ref={props.buttonRef}
                     >
                         Check out some of my work!
