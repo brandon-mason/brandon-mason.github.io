@@ -5,7 +5,7 @@
         "description": "This project features a piano that can be played using a qwerty keyboard. The keyboard inputs can be recorded, and will be added to a grid in real time, which can be edited using a mouse. The contents of the grid can then be played back to the user. Functionality for saving and loading from a database exists but is not active due to online database restrictions.",
         "image": "project-images/piano.png",
         "technologies": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
-        "github": "https://github.com",
-        "deployed": "https://deployed.com"
+        "github": "https://github.com/brandon-mason/piano-roll/",
+        "deployed": "https://piano-roll.vercel.app/"
     }
 ]

@@ -55,6 +55,7 @@
 
 .projectLinks {
     flex-basis: auto;
+    margin-top: 2%
     /* margin-top: auto; */
 }
 
@@ -119,6 +120,10 @@
 
 .description {
     font-size: rem(20px);
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        font-size: rem(18px);
+    }
 }
 
 .spoiler {
@@ -154,4 +159,13 @@ a[target="_blank"]::after {
 
 .techItem > p {
     color: var(--mantine-color-mint);
+}
+
+.projectLink {
+    /* color: var(--mantine-color-viridian); */
+    transform: scale(1.1);
+}
+
+a > span:hover {
+    border-bottom: 2px solid var(--mantine-color-cyan-7);
 }

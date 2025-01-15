@@ -86,5 +86,5 @@ a[target="_blank"]::after {
 }
 
 .projectLink:hover {
-    color: var(--mantine-color-viridian) !important;
+    color: var(--mantine-color-cyan-6);
 }
