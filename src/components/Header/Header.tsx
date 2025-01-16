@@ -31,7 +31,7 @@ const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef)
         { link: '/#projects', label: 'Projects', ref: props.refObj.Projects, class: "projects" },
         { link: 'Resume.pdf', label: 'Resume', class: "resume-link", target: '_blank' },
         { link: '/#resume', label: 'Resume', ref: props.refObj.Resume, class: "resume" },
-        { link: '/#contact', label: 'Contact Me', class: "contact" },
+        // { link: '/#contact', label: 'Contact Me', class: "contact" },
     ];
 
     const items: JSX.Element[] = links.map((link: Link) => (
@@ -40,6 +40,7 @@ const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef)
             href={link.link}
             target={link.target}
             className={[classes.link, link.class + "-header"].join(' ')}
+            onClick={() => close()}
         >
             {link.label}
         </a>

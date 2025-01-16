@@ -36,7 +36,7 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                 <Container className={classes.imgContainer}>
                     <Image src={props.image} alt={props.name.toLowerCase().replace(/\s/g, '-')} 
                         style={{ borderRadius: '10px' }} 
-                        mx='auto'
+                        mx=''
                         classNames={{
                             root: classes.imgRoot,
                         }}
@@ -59,13 +59,13 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                     <Group className={classes.projectLinks}>
                         <a href={props.github} target="_blank" rel="noreferrer" className={classes.projectLink}>
                             <span>
-                            <SiGithub size={35}/>
+                            <SiGithub className={classes.projectLinkSvg}/>
                             </span>
                         </a>
                         <Space/>
                         <a href={props.deployed} target="_blank" rel="noreferrer" className={classes.projectLink}>
                             <span>
-                            <LuExternalLink size={35}/>
+                                <LuExternalLink className={classes.projectLinkSvg}/>
                             </span>
                         </a>
                     </Group>
