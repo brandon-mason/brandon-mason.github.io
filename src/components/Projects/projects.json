@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Recordable Piano",
-        "description": "This project features a piano that can be played using a qwerty keyboard. The keyboard inputs can be recorded, and will be added to a grid in real time, which can be edited using a mouse. The contents of the grid can then be played back to the user. Functionality for saving and loading from a database exists but is not active due to online database restrictions.",
+        "description": "An interactive piano playable with a QWERTY keyboard, featuring real-time recording and a grid-based editor for visualizing and adjusting MIDI notes. Users can edit their recordings, play them back, and save or load projects using local files or account-based database functionality (currently limited due to restrictions).",
         "image": "project-images/piano.png",
         "technologies": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
         "github": "https://github.com/brandon-mason/piano-roll/",

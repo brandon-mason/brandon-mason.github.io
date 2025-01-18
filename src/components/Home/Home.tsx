@@ -25,18 +25,17 @@ const Home = forwardRef<MantineComponent<any>, HomeProps>((props, homeRef) => {
             >
                 <Box pr={(props.vpWidth < 1024) ? "0" : "10vh"}>
                     <Text className={classes.introtext}>
-                    Hi there, my name is
+                    Hi there, I'm
                     </Text>
                     <Title ta="left" fw={900} className={classes.title}>
                     Brandon Mason.
                     </Title>
                     <Text ta="left" className={classes.text}>
-                    I am pursuing a <strong>Bachelor of Science in Computer Science</strong> degree at Texas State University 
-                    and will be graduating in December of 2025. Most of my projects are web based but I am well versed in many other 
-                    languages such as C++ and Java.
+                    I am pursuing a <strong>Bachelor of Science in Computer Science</strong> degree at Texas State University, with plans to graduate in December 2025. 
+                    While most of my projects are web-based, I have a strong foundation in various programming languages, including C++ and Java.
                     </Text>
-                    <Text classNames={{root: classes.resumeRoot}} > You can view my <Anchor href='Resume.pdf' target='_blank'>resume here</Anchor>,</Text>
-                    <Text classNames={{root: classes.githubRoot}} > and my <Anchor href='https://github.com/brandon-mason' target='_blank'>GitHub here</Anchor>.</Text>
+                    <Text classNames={{root: classes.resumeRoot}} > Take a look at my <Anchor href='Resume.pdf' target='_blank'>resume</Anchor>,</Text>
+                    <Text classNames={{root: classes.githubRoot}} > and explore my work on <Anchor href='https://github.com/brandon-mason' target='_blank'>GitHub</Anchor>.</Text>
                 </Box>
                 <a href={'#projects'}>
                     <Button 

@@ -63,14 +63,14 @@ const AboutMe = forwardRef<MantineComponent<any>, AboutMeProps>((props, aboutRef
             <Group align='flex-start'>
                 <Stack className={classes.infoSection}>
                     <Text>
-                        Hi! I'm Brandon, a senior Computer Science student at Texas State University.
-                        I started writing code in high school, and have been hooked ever since. I love
-                        problem solving and creating new things, and I'm always looking for ways to expand 
-                        on my knowledge and skills in any activity or subject that I'm interested in.
+                        Hi, I'm Brandon! I'm a senior Computer Science student at Texas State University with a 
+                        passion for coding that started back in high school. Ever since writing my first lines of code, 
+                        I've been hooked on problem-solving and creating new things. I'm constantly seeking opportunities 
+                        to expand my knowledge and skills in areas that interest me.
                         <br/><br/>
-                        I'm currently looking for a software engineering internship this summer, and a 
-                        full-time position after I graduate in the Fall. I'm excited to see where my career
-                        will go, and am excited to have the opportunity to experiment with any new technologies.
+                        I'm currently looking for a software engineering internship for this summer and a 
+                        full-time position after I graduate in the fall. I'm excited to see where my career 
+                        takes me and eager to explore and experiment with new technologies along the way.
 
                     </Text>
                 </Stack>
