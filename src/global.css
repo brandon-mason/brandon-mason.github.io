@@ -88,3 +88,13 @@ a[target="_blank"]::after {
 .projectLink:hover {
     color: var(--mantine-color-cyan-6);
 }
+
+.linkText {
+    display: inline-flex;
+    align-items: center;
+}
+
+.externalLinkSvg {
+    font-size: 0.8em;
+    margin-left: 0.2em;
+}

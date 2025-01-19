@@ -32,11 +32,10 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                     <Title order={3} className={classes.title}>{props.name}</Title>
                 } 
             />
-            <Flex wrap='nowrap' pb={'2rem'} pr={'1.5rem'} className={classes.projInfo}>
+            <Flex wrap='nowrap' pb={'2rem'} className={classes.projInfo}>
                 <Container className={classes.imgContainer}>
                     <Image src={props.image} alt={props.name.toLowerCase().replace(/\s/g, '-')} 
                         style={{ borderRadius: '10px' }} 
-                        mx=''
                         classNames={{
                             root: classes.imgRoot,
                         }}
