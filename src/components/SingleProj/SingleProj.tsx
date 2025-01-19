@@ -39,6 +39,7 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                         classNames={{
                             root: classes.imgRoot,
                         }}
+                        m='auto'
                     />
                 </Container>
                 <Stack className={classes.textSection} justify='space-between'>
@@ -64,7 +65,7 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                         <Space/>
                         <a href={props.deployed} target="_blank" rel="noreferrer" className={classes.projectLink}>
                             <span>
-                                <LuExternalLink className={classes.projectLinkSvg}/>
+                                <LuExternalLink className={classes.projectLinkSvg} />
                             </span>
                         </a>
                     </Group>
