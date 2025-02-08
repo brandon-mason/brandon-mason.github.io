@@ -43,8 +43,7 @@
 
 .scrollbar {
     @mixin hover {
-        @mixin where-dark {
-            background-color: transparent;
-        }
+        border-radius: 10;
+        background-color: transparent;
     }
 }

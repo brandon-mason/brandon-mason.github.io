@@ -83,7 +83,7 @@
 .imgRoot {
     /* max-width: 100%; */
     /* height: auto; */
-    aspect-ratio: 14/9;
+    /* aspect-ratio: 14/9; */
     /* object-fit: contain; */
     
     @media (max-width: 75em) {

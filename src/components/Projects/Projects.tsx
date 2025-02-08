@@ -17,7 +17,7 @@ interface Project {
     image: string;
     technologies: string[];
     github: string;
-    deployed: string;
+    deployed?: string;
 }
 
 const Projects = forwardRef<MantineComponent<any>, ProjectProps>((props, projectRef: React.ForwardedRef<any>) => {

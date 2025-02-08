@@ -12,7 +12,7 @@ interface SingleProjProps {
     image: string;
     technologies: string[];
     github: string;
-    deployed: string; 
+    deployed?: string; 
     isMdWidth: boolean | undefined;
 }
 
@@ -40,6 +40,7 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                             root: classes.imgRoot,
                         }}
                         m='auto'
+                        fit='contain'
                     />
                 </Container>
                 <Stack className={classes.textSection} justify='space-between'>
@@ -63,11 +64,11 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                             </span>
                         </a>
                         <Space/>
-                        <a href={props.deployed} target="_blank" rel="noreferrer" className={classes.projectLink}>
+                        {(props.deployed) ? <a href={props.deployed} target="_blank" rel="noreferrer" className={classes.projectLink}>
                             <span>
                                 <LuExternalLink className={classes.projectLinkSvg} />
                             </span>
-                        </a>
+                        </a> : <></>}
                     </Group>
                 </Stack>
             </Flex>
