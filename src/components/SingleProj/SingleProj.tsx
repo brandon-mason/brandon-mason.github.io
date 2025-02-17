@@ -44,13 +44,13 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                     />
                 </Container>
                 <Stack className={classes.textSection} justify='space-between'>
-                    <Text visibleFrom='sm' className={classes.description} style={{ verticalAlign: 'top', alignSelf: 'flex-start', textWrap: 'wrap' }}>{props.description}</Text>
-                    <Spoiler maxHeight={120} showLabel='Show More' hideLabel='Hide' hiddenFrom='sm' classNames={{content: classes.spoiler, root: classes.spoilerRoot}}
+                    <Text className={classes.description} style={{ verticalAlign: 'top', alignSelf: 'flex-start', textWrap: 'wrap' }}>{props.description}</Text>
+                    {/* <Spoiler maxHeight={120} showLabel='Show More' hideLabel='Hide' hiddenFrom='sm' classNames={{content: classes.spoiler, root: classes.spoilerRoot}}
                         expanded={expanded}
                         onExpandedChange={setExpanded}
                     >
                         <Text className={classes.description}>{props.description}</Text>
-                    </Spoiler>
+                    </Spoiler> */}
                     <Grid classNames={{
                         root: classes.techStackGrid,
                         col: classes.techStackCol,

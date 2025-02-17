@@ -128,10 +128,10 @@
 }
 
 .description {
-    font-size: rem(20px);
+    font-size: rem(22px);
 
     @media (max-width: $mantine-breakpoint-sm) {
-        font-size: rem(18px);
+        font-size: rem(17px);
     }
 }
 
