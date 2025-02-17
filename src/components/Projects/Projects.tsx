@@ -1,8 +1,9 @@
-import { MantineComponent, Container, Title } from '@mantine/core';
+import { MantineComponent, Container, Title, Text, Space } from '@mantine/core';
 import classes from './Projects.module.css';
 import { forwardRef, useEffect, useState } from 'react';
 import SingleProj from '../SingleProj/SingleProj';
 import projects from './projects.json';
+import { LuExternalLink } from 'react-icons/lu';
 
 interface ProjectProps {
     headerHeight: number;
@@ -52,6 +53,12 @@ const Projects = forwardRef<MantineComponent<any>, ProjectProps>((props, project
             } 
         >
             <Title order={2} className={classes.title}>Projects</Title>
+            <Text>
+                These are some of the projects I've created on my own time.
+                <br/>
+                Click the <LuExternalLink className={classes.externalLinkSvg}/> symbols to visit the project's website.
+            </Text>
+            <Space h='md' />
             <Container p={0} className={classes.projectsRoot} >
                 {projectList}
             </Container>

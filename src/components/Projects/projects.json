@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Recordable Piano",
-        "description": "An interactive piano playable with a QWERTY keyboard, featuring real-time recording and a grid-based editor for visualizing and adjusting MIDI notes. Users can edit their recordings, play them back, and save or load projects using local files or account-based cloud storage functionality.",
+        "description": "An interactive piano app with real-time recording and cloud storage for managing projects.",
         "image": "project-images/piano.png",
         "technologies": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
         "github": "https://github.com/brandon-mason/piano-roll/",
@@ -11,7 +11,7 @@
     {
         "id": 2,
         "name": "OpenAI Image Gen GUI",
-        "description": "The object-oriented course I took included an optional assignment to explore using APIs and LLMs. This project created the UI and the calls to OpenAI to draw images. The assignment used Java and I later adapted it to React. It allows users to generate images based a prompt using OpenAi's Dall-E model. The app also includes a gallery to view previously generated images.",
+        "description": "An extra credit assignment for my Object-Oriented class that generates images using Open AI's API.",
         "image": "project-images/ai-image-generators.png",
         "technologies": ["Java", "React"],
         "github": ""
@@ -19,7 +19,7 @@
     {
         "id": 3,
         "name": "Blog Website",
-        "description": "A blog website I made for my girlfriend which is currently still under development. It includes a full fledged content management system connected to a SQL server. The site allows users to create, edit, and delete blog posts. It also includes an account creation system where members can like and comment on posts, as well as subscribe to email post notifications.",
+        "description": "A blog website with a full CMS connected to an SQL server. User's can make accounts allowing them to like, comment, and subscribe to email notifications. Currently in development.",
         "image": "project-images/blab-times.png",
         "technologies": ["Astro", "Strapi", "React"],
         "github": "https://github.com/brandon-mason/blog-astro-strapi",

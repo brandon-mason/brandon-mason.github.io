@@ -5,7 +5,7 @@
 .title {
     /* font-size: 3.3rem; */
     font-weight: 700;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 /* .title {
@@ -89,4 +89,12 @@
     /* width: 100vw;
     position: relative;
     left: calc(-50vw + 50%); */
+}
+
+.externalLinkSvg {
+    vertical-align: middle;
+}
+
+.projectDescription {
+    font-size: 
 }
