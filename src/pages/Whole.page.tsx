@@ -31,14 +31,20 @@ const WholePage: React.FC = () => {
 		"Resume":resumeRef,
 	};
 
+	const scrollIntoView = (ref: React.MutableRefObject<any>) => {
+		if (ref.current) {
+			ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}
+	}
+
 	// Triggers all scrolling actions for the header and buttons.
 	useEffect(() => {
 		let key: String = String(hash).charAt(1).toUpperCase() + hash.substring(2, hash.length);
 		let sectionRef = refObj[key as keyof typeof refObj];
 
 		if(refObj[key as keyof typeof refObj]) {
-			if (sectionRef.current && sectionRef) {
-				sectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			if (sectionRef) {
+				scrollIntoView(sectionRef);
 			}
 		}
 	}, [hash]);
@@ -50,7 +56,7 @@ const WholePage: React.FC = () => {
 				thumb: classes.thumb,
 				scrollbar: classes.scrollbar,
 			}} onScrollPositionChange={(position: { x: number; y: number }) => setScrollState((position.y > 0) ? true : false)}>
-				<Header ref={ref} scrollState={scrollState} refObj={refObj}/>
+				<Header ref={ref} scrollState={scrollState} refObj={refObj} scrollIntoView={scrollIntoView}/>
 				<Container classNames={{root: classes.containerRoot}} pr={''} >
 					<Home ref={refObj.Home} vpWidth={vpWidth} headerHeight={headerHeight} isLgHeight={isLgHeight} buttonRef={buttonRef} projectRef={refObj.Projects}/>
 					<AboutMe ref={refObj.About} headerHeight={headerHeight} vpHeight={vpHeight} isMdWidth={isMdWidth}/>

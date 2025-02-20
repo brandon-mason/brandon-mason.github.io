@@ -20,6 +20,7 @@ interface HeaderProps {
         Projects: React.MutableRefObject<any>;
         Resume: React.MutableRefObject<any>;
     };
+    scrollIntoView: (ref: React.MutableRefObject<any>) => void;
 }
 
 const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef) => {
@@ -40,7 +41,12 @@ const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef)
             href={link.link}
             target={link.target}
             className={[classes.link, link.class + "-header"].join(' ')}
-            onClick={() => close()}
+            onClick={() => {
+                if (link.ref && link.ref.current) {
+                    props.scrollIntoView(link.ref);
+                    close();
+                }
+            }}
         >
             {link.label}
         </a>
