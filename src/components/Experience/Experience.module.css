@@ -10,11 +10,11 @@
     color: var(--mantine-color-mint);
 }
 
-.projectsRoot {
+.experienceRoot {
     overflow: visible;
 }
 
-.projectsRoot {
+.experienceRoot {
     @media only screen and (max-width: $mantine-breakpoint-md) {
         width: auto;
     }
@@ -27,6 +27,6 @@
     vertical-align: middle;
 }
 
-.projectDescription {
+.experienceDescription {
     font-size: 
 }

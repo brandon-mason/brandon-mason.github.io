@@ -1,41 +1,13 @@
 #home {
-    font-size: rem(16px);
+    font-size: 1rem;
 }
 
 .root {
     min-height: 100vh;
 
-    @media (max-width: $mantine-breakpoint-lg) {
+    @media only screen and (max-width: $mantine-breakpoint-lg) {
         min-height: auto;
     }
-    /* @media (max-height: 62em) and (min-height: 48em) {
-        min-height: auto;
-    } */
-}
-
-.title {
-    /* font-size: 2.5rem; */
-}
-
-.introtext {
-    font-size: rem(20px);
-
-    @media (max-width: $mantine-breakpoint-sm) {
-        font-size: rem(20px);
-    }
-    @media (min-width: $mantine-breakpoint-sm) {
-        font-size: rem(25px);
-    }
-    @media (min-width: $mantine-breakpoint-lg) {
-        font-size: rem(27px);
-    }
-    @media (min-width: $mantine-breakpoint-xl) {
-        font-size: rem(29px);
-    }
-}
-
-.text, .link {
-    
 }
 
 .link {
@@ -43,10 +15,6 @@
 }
 
 .resumeRoot {
-    /* display: none;
-    @media (max-width: $mantine-breakpoint-sm) {
-        display: block;
-    } */
     line-height: 2.3;
 }
 
@@ -57,7 +25,7 @@
 
 .button:hover {
     background-color: var(--mantine-color-viridian);
-    opacity: 0.8;   
+    opacity: 0.8;
 }
 
 .resumeRoot, .githubRoot {

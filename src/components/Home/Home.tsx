@@ -1,7 +1,7 @@
 import { Anchor, Box, Button, Flex, MantineComponent, Stack, Text, Title } from '@mantine/core';
-import classes from './Home.module.css';
 import { forwardRef } from 'react';
 import { LuExternalLink } from 'react-icons/lu';
+import classes from './Home.module.css';
 
 interface HomeProps {
     vpWidth: number;
@@ -32,8 +32,8 @@ const Home = forwardRef<MantineComponent<any>, HomeProps>((props, homeRef) => {
                     Brandon Mason.
                     </Title>
                     <Text ta="left" className={classes.text}>
-                    I am pursuing a <strong>Bachelor of Science in Computer Science</strong> degree at Texas State University, with plans to graduate in December 2025. 
-                    While most of my projects are web-based, I have a strong foundation in various programming languages, including C++ and Java.
+                    I am pursuing a <strong>Bachelor of Science in Computer Science</strong> degree at Texas State University, with plans to graduate in December 2025.
+                    Recently I had the opportunity to intern at University Federal Credit Union as an Application Developer working on the web banking application.
                     </Text>
                     <Text classNames={{root: classes.resumeRoot}} > Take a look at my <Anchor className='linkText' href='Resume.pdf' target='_blank'>resume<LuExternalLink className='externalLinkSvg'/></Anchor>,</Text>
                     <Text classNames={{root: classes.githubRoot}} > and explore my work on <Anchor className='linkText' href='https://github.com/brandon-mason' target='_blank'>GitHub<LuExternalLink className='externalLinkSvg'/></Anchor>.</Text>

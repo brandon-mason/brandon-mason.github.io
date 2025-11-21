@@ -1,9 +1,8 @@
+import { Container, Divider, Flex, Grid, Group, Image, Space, Stack, Text, Title } from '@mantine/core';
 import React, { useState } from 'react';
-import { Container, Divider, Flex, Grid, Group, Image, Space, Spoiler, Stack, Text, Title } from '@mantine/core';
-import classes from './SingleProj.module.css';
-import { SiGithub } from "react-icons/si";
 import { LuExternalLink } from "react-icons/lu";
-import { useMediaQuery } from '@mantine/hooks';
+import { SiGithub } from "react-icons/si";
+import classes from './SingleProj.module.css';
 
 interface SingleProjProps { 
     id: number;

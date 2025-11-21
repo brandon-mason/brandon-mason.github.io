@@ -1,8 +1,8 @@
 :root {
-    --mantine-color-mint: #96C9AB;
+    --mantine-color-mint: #011627;
     --mantine-color-viridian: #45825E;
     --mantine-color-zomp: #569885;
-    --text-color: #51755B;
+    --text-color: #C9C5CB;
 }
 
 body {
@@ -20,61 +20,51 @@ a {
 }
 
 /* .mantine-Container-root {
-    @media (max-height: 48em) {
+    @media only screen and (max-height: $mantine-breakpoint-md) {
         max-height: 30vh; 
     }
 } */
 
 .mantine-Text-root {
     color: var(--text-color);
-    font-size: rem(18px);
+    font-size: 1rem;
 
-    @media (max-width: $mantine-breakpoint-sm) {
-        font-size: rem(17px);
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
+        font-size: 1rem;
     }
-    @media (min-width: $mantine-breakpoint-sm) {
-        font-size: rem(22px);
-    }
-    @media (min-width: $mantine-breakpoint-lg) {
-        font-size: rem(23px);
-    }
-    @media (min-width: $mantine-breakpoint-xl) {
-        font-size: rem(25px);
+    @media only screen and (min-width: $mantine-breakpoint-sm) {
+        font-size: 1.25rem;
     }
 }
 
 .mantine-Title-root {
     color: var(--mantine-color-zomp);
-    font-size: 2.5rem;
+    font-size: 1.75rem;
 
-    @media (max-width: $mantine-breakpoint-sm) {
-        /* font-size: rem(50px); */
-        line-height: rem(50px);
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
+        font-size: 1.75rem;
+        line-height: 3rem;
     }
-    @media (min-width: $mantine-breakpoint-sm) {
-        /* font-size: rem(60px); */
-        line-height: rem(60px);
+    @media only screen and (min-width: $mantine-breakpoint-sm) {
+        font-size: 2rem;
+        line-height: 4rem;
     }
-    @media (min-width: $mantine-breakpoint-lg) {
-        /* font-size: rem(75px); */
-        line-height: rem(70px);
-    }
-    @media (min-width: $mantine-breakpoint-xl) {
-        /* font-size: rem(90px); */
-        line-height: rem(50px);
+    @media only screen and (min-width: $mantine-breakpoint-md) {
+        font-size: 2.5rem;
+        line-height: 4rem;
     }
 }
 
 .resume-link-header {
     display: none;
 
-    @media (max-width: $mantine-breakpoint-sm) {
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
         display: block;
     }
 }
 
 .resume-header {
-    @media (max-width: $mantine-breakpoint-sm) {
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
         display: none;
     }
 }
@@ -95,6 +85,23 @@ a[target="_blank"]::after {
 }
 
 .externalLinkSvg {
-    font-size: 0.8em;
-    margin-left: 0.2em;
+    font-size: 0.8rem;
+    margin-left: 0.2rem;
+}
+
+.section-header {
+    padding-bottom: 1rem;
+
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
+        font-size: 1.75rem;
+        line-height: 0.75rem;
+    }
+    @media only screen and (min-width: $mantine-breakpoint-sm) {
+        font-size: 2rem;
+        line-height: 1rem;
+    }
+    @media only screen and (min-width: $mantine-breakpoint-md) {
+        font-size: 2.5rem;
+        line-height: 2rem;
+    }
 }

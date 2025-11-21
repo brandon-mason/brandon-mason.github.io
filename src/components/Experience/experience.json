@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Application Developer Intern",
+        "date": "June 2025 - December 2025",
+        "description": [
+            "Developed features for a web banking application built on Angular, RxJS, SCSS, and Bootstrap utility classes.",
+            "Collaborated in an Agile environment for sprint planning, task management, and daily stand-ups.",
+            "Partnered with product owners and UX designers to deliver components that matched business requirements and upheld design standards.",
+            "Found design patterns for components and services that can be reused in features across the application",
+            "Contributed to code reviews, testing, and documentation.",
+            "Created and maintained unit tests written with Jest to ensure code quality and reliability.",
+            "Translated Figma UX designs from the design team into responsive, accessible UI components."
+        ],
+        "technologies": ["TypeScript", "Angular", "RxJS", "HTML", "SCSS", "Node.js"]
+    }
+]

@@ -1,23 +1,13 @@
 .title {
-    /* font-size: 3.3rem; */
     font-weight: 700;
-    /* margin-bottom: 1rem; */
 }
 
 iframe {
-    height: 68vh;
-    @media (min-width: 48em) {
-        /* width: 70vw; */
-        /* max-width: 70%; */
-    }
+    height: 75vh;
 }
 
-
-
 .resumeRoot {
-    min-height: 100vh;
-
-    @media (max-width: $mantine-breakpoint-xs) {
-        display: none;
+    @media only screen and (min-width: $mantine-breakpoint-xs) {
+        min-height: 100vh;
     }
 }

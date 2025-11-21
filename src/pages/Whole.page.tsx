@@ -1,13 +1,14 @@
-import Home from '../components/Home/Home';
-import Header from '@/components/Header/Header';
-import { Container, MantineComponent, ScrollArea } from '@mantine/core';
-import classes from './Whole.page.module.css';
-import { useEffect, useState, useRef, useCallback } from 'react';
-import Projects from '@/components/Projects/Projects';
 import AboutMe from '@/components/AboutMe/AboutMe';
+import Experience from '@/components/Experience/Experience';
+import Header from '@/components/Header/Header';
+import Projects from '@/components/Projects/Projects';
 import Resume from '@/components/Resume/Resume';
-import { useElementSize, useHash, useMediaQuery, useViewportSize } from '@mantine/hooks';
 import ScrollArrow from '@/components/ScrollArrow/ScrollArrow';
+import { Container, MantineComponent, ScrollArea } from '@mantine/core';
+import { useElementSize, useHash, useMediaQuery, useViewportSize } from '@mantine/hooks';
+import { useEffect, useRef, useState } from 'react';
+import Home from '../components/Home/Home';
+import classes from './Whole.page.module.css';
 
 const WholePage: React.FC = () => {
     const [scrollState, setScrollState] = useState(false);
@@ -15,18 +16,20 @@ const WholePage: React.FC = () => {
 
 	const homeRef = useRef<MantineComponent<any>>(null);
 	const aboutRef = useRef<MantineComponent<any>>(null);
+	const experienceRef = useRef<MantineComponent<any>>(null);
 	const projectRef = useRef<MantineComponent<any>>(null);
 	const resumeRef = useRef<MantineComponent<any>>(null);
 	const buttonRef = useRef<MantineComponent<any>>(null);
 
 	const { height: vpHeight, width: vpWidth } = useViewportSize();
 	const { ref, width: headerWidth, height: headerHeight } = useElementSize();
-    const isMdWidth = useMediaQuery('(max-width: 62em)');
-    const isLgHeight = useMediaQuery('(max-width: 75em)');
+    const isMdWidth = useMediaQuery('(max-width: 62rem)');
+    const isLgHeight = useMediaQuery('(max-width: 75rem)');
 	
 	const refObj = {
 		"Home":homeRef,
 		"About":aboutRef,
+		"Experience":experienceRef,
 		"Projects":projectRef,
 		"Resume":resumeRef,
 	};
@@ -60,6 +63,7 @@ const WholePage: React.FC = () => {
 				<Container classNames={{root: classes.containerRoot}} pr={''} >
 					<Home ref={refObj.Home} vpWidth={vpWidth} headerHeight={headerHeight} isLgHeight={isLgHeight} buttonRef={buttonRef} projectRef={refObj.Projects}/>
 					<AboutMe ref={refObj.About} headerHeight={headerHeight} vpHeight={vpHeight} isMdWidth={isMdWidth}/>
+					<Experience ref={refObj.Experience} headerHeight={headerHeight} isMdWidth={isMdWidth} vpHeight={vpHeight}/>
 					<Projects ref={refObj.Projects} headerHeight={headerHeight} isMdWidth={isMdWidth} vpHeight={vpHeight}/>
 					<Resume ref={refObj.Resume} headerHeight={headerHeight}/>
 				</Container>

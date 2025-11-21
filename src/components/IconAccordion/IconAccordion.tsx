@@ -1,8 +1,8 @@
-import { Accordion, AccordionItem, AccordionPanel, Grid, GridCol, HoverCard, SimpleGrid, Text } from '@mantine/core';
+import { Accordion, AccordionItem, AccordionPanel, Grid, HoverCard, Text } from '@mantine/core';
 import React, { useState } from 'react';
-import { SiReact, SiHtml5, SiTypescript, SiCss3, SiMantine, SiCplusplus, SiMongodb, SiMysql, SiGit } from "react-icons/si";
-import { FaJava } from "react-icons/fa6";
 import { IconContext } from 'react-icons';
+import { FaJava } from "react-icons/fa6";
+import { SiCplusplus, SiCss3, SiGit, SiHtml5, SiMantine, SiMongodb, SiMysql, SiReact, SiTypescript } from "react-icons/si";
 import classes from './IconAccordion.module.css';
 
 // interface AccordionProps {

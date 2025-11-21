@@ -1,13 +1,16 @@
 [
+    "Angular",
+    "RxJS",
     "React",
     "HTML5",
     "TypeScript",
-    "CSS3",
+    "SCSS",
     "C++",
     "Java",
     "MongoDB",
     "MySQL",
     "Git",
     "Github",
-    "VS Code"
+    "VS Code",
+    "Azure DevOps"
 ]

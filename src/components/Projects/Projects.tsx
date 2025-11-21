@@ -52,7 +52,7 @@ const Projects = forwardRef<MantineComponent<any>, ProjectProps>((props, project
                 })()
             } 
         >
-            <Title order={2} className={classes.title}>Projects</Title>
+            <Title order={2} className='section-header'>Projects</Title>
             <Text>
                 These are some of the projects I've created on my own time.
                 <br/>

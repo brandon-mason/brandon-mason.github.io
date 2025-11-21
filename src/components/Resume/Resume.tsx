@@ -10,13 +10,13 @@ interface ResumeProps {
 const Resume = forwardRef<MantineComponent<any>, ResumeProps>((props, resumeRef) => {
     return (
         <Container pt={`calc(${props.headerHeight}px + 1vh`} px={0} mx={0} ref={resumeRef} className='resume-container' classNames={{root: classes.resumeRoot}}>
-            <Title order={2} className={classes.title}>Resume</Title>
-            <Anchor className='linkText' href='Resume.pdf' target='_blank'>
+            <Title order={2} className='section-header'>Resume</Title>
+            <Anchor className='linkText' href='Brandon_Mason.pdf' target='_blank'>
                 PDF Link
                 <LuExternalLink className='externalLinkSvg'/>
             </Anchor>
-            <Box visibleFrom='xs' mih={'68vh'} mt={'1em'}>
-                <iframe src="Resume.pdf" width='100%' min-height='80vh' style={{ borderRadius: '10px', zoom: '0.9' }}></iframe>
+            <Box visibleFrom='xs' mt={'1rem'}>
+                <iframe src='Brandon_Mason.pdf' width='100%' min-height='80vh' style={{ borderRadius: '10px', zoom: '0.9' }}></iframe>
             </Box>
         </Container>
     );

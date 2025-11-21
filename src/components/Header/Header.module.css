@@ -3,21 +3,14 @@ header {
   top: 0;
   right: 0;
   width: 100%;
-  font-size: rem(18px);
+  font-size: 1.125rem;
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(10px);
-  /* background-color: rgba(var(--mantine-color-cyan-9), .8); */
   transition: box-shadow .25s ease-in-out;
 
-  @media (max-width: $mantine-breakpoint-sm) {
-    font-size: rem(20px);
+  @media only screen and (min-width: $mantine-breakpoint-sm) {
+	font-size: 1.25rem;
   }
-  @media (min-width: $mantine-breakpoint-sm) {
-    font-size: rem(21px);
-  }
-  @media (min-width: $mantine-breakpoint-lg) {
-    font-size: rem(22px);
-}
 }
 
 .header {
@@ -35,13 +28,11 @@ header {
 }
 
 .link {
-  /* display: block; */
   line-height: 1;
   padding: 8px 12px;
   border-radius: 14px;
   text-decoration: none;
   color: var(--mantine-color-zomp);
-  /* font-size: var(--mantine-font-size-xl); */
   font-weight: 600;
   transition-property: color;
   transition-duration: 0.25s;
@@ -50,11 +41,11 @@ header {
   margin: auto;
   
   @mixin hover {
-    color: var(--mantine-color-viridian);
+	color: var(--mantine-color-viridian);
   }
   
   focus {
-    color: var(--mantine-color-viridian);
+	color: var(--mantine-color-viridian);
   }
 }
 
@@ -73,11 +64,11 @@ header {
   transition-delay: 0;
   
   @mixin hover {
-    color: var(--mantine-color-viridian);
+	color: var(--mantine-color-viridian);
   }
   
   focus {
-    color: var(--mantine-color-viridian);
+	color: var(--mantine-color-viridian);
   }
 
 }
@@ -106,12 +97,12 @@ header {
   justify-content: center;
   align-items: center;
   background:
-        /* top, transparent black, faked with gradient */ 
-        linear-gradient(
-          rgba(211, 211, 211, .3), 
-          rgba(211, 211, 211, .3)),
-          var(--mantine-color-mint)
-        
+		/* top, transparent black, faked with gradient */ 
+		linear-gradient(
+		  rgba(211, 211, 211, .3), 
+		  rgba(211, 211, 211, .3)),
+		  var(--mantine-color-mint)
+		
 }
 
 .modalBody {
@@ -122,7 +113,6 @@ header {
 }
 
 .modalOverlay {
-  /* opacity: .35 !important; */
   backdrop-filter: blur(10px);
   background-color: transparent;
 }

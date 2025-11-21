@@ -3,27 +3,12 @@
     padding: 0;
     scroll-margin: 75px;
 
-    @media (max-width: 48em) {
+    @media only screen and (max-width: $mantine-breakpoint-md) {
         padding: 0 0 25vw 0;
         max-width: 85vw;
         width: min(90vw, 1024px);
         margin: 0 auto;
     }
-
-    /* @media (max-width: $mantine-breakpoint-sm) {
-    }
-    @media (min-width: $mantine-breakpoint-sm) {
-        margin: 0 rem(50px);
-        margin-right: 10vw;
-    }
-    @media (min-width: $mantine-breakpoint-lg) {
-        margin: 0 rem(80px);
-        margin-right: 10vw;
-    }
-    @media (min-width: $mantine-breakpoint-xl) {
-        margin: 0 rem(90px);
-        margin-right: 10vw;
-    } */
 
     a {
         color: var(--mantine-color-cyan-7);

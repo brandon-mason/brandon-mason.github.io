@@ -3,6 +3,7 @@
     color: var(--mantine-color-zomp);
     margin: 0;
     padding: 0;
+    line-height: 2rem;
 
     @media only screen and (min-width: $mantine-breakpoint-sm) {
         font-size: 1.5rem;
@@ -12,18 +13,18 @@
     }
 }
 
-.projInfo {
-    @media only screen and (max-width: $mantine-breakpoint-md) {
+.expInfo {
+    @media only screen and (max-width: $mantine-breakpoint-lg) {
         flex-direction: column;
         justify-content: space-between;
     }
-    @media only screen and (min-width: $mantine-breakpoint-md) {
+    @media only screen and (min-width: $mantine-breakpoint-lg) {
         flex-direction: row;
     }
     width: 100%;
 }
 
-.projInfo:nth-child(1) {
+.expInfo:nth-child(1) {
     justify-self: flex-start;
     margin-bottom: auto;
     flex-grow: 2;
@@ -31,6 +32,7 @@
 
 .techStackGrid {
     flex-basis: auto;
+
     margin-top: auto;
 }
 
@@ -38,12 +40,12 @@
     margin-top: auto;
 }
 
-.projectLinks {
+.expectLinks {
     flex-basis: auto;
     margin-top: 2%
 }
 
-.projInfo > * {
+.expInfo > * {
     @media only screen and (max-width: $mantine-breakpoint-lg) {
         margin: 0;
         padding: 0;
@@ -52,18 +54,15 @@
 
 .imgContainer {
     align-self: flex-start;
+    flex: 2 1 0;
     margin-top: 1%;
     padding-inline: 0;
-    margin: 0 auto;
 
-    @media only screen and (max-width: $mantine-breakpoint-sm) {
+    @media only screen and (max-width: $mantine-breakpoint-md) {
         margin-top: 0;
     }
-    @media only screen and (min-width: $mantine-breakpoint-sm) {
-        max-width: 65%;
-    }
-    @media only screen and (min-width: $mantine-breakpoint-lg) {
-        flex: 4;
+    @media only screen and (max-width: $mantine-breakpoint-lg) {
+        margin: 0 auto;
     }
 }
 
@@ -75,8 +74,6 @@
 }
 
 .textSection {
-    margin-top: 4%;
-    
     @media only screen and (min-width: $mantine-breakpoint-lg) {
         flex: 3 1 0;
         width: 60vw;
@@ -90,6 +87,7 @@
     float: left;
 }
 
+
 a[target="_blank"]::after {
     content: none;
 }
@@ -100,7 +98,6 @@ a[target="_blank"]::after {
 
 .techStackCol > p {
     font-size: 1rem !important;
-
 }
 
 .techItem {
@@ -114,11 +111,45 @@ a[target="_blank"]::after {
     color: var(--mantine-color-mint);
 }
 
+.bulletList {
+    padding-right: 4rem;
+
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
+        padding-right: 0;
+    }
+    @media only screen and (min-width: $mantine-breakpoint-sm) {
+        padding-right: 0;
+    }
+}
+
+.bulletItem {
+    margin-inline: .5rem;
+}
+
+.bulletItem p {
+    font-size: 1.25rem;
+
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
+        font-size: 1rem;
+    }
+    @media only screen and (min-width: $mantine-breakpoint-sm) {
+        font-size: 1.125rem;
+    }
+    @media only screen and (min-width: $mantine-breakpoint-lg) {
+        font-size: 1.25rem;
+    }
+}
+
+li::marker {
+    margin: 1px;
+    color: var(--text-color);
+}
+
 a > span:hover {
     border-bottom: 2px solid var(--mantine-color-cyan-7);
 }
 
-.projectLinkSvg {
+.experienceLinkSvg {
     width: 2.5rem;
     height: 2.5rem;
 }

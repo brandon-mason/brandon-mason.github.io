@@ -14,7 +14,7 @@ const ScrollArrow: React.FC<ScrollArrowProps> = (props) => {
     useEffectIfScrolled(setHasScrolled, props.scrollState);
 
     return (
-        <Anchor href='#about' className={`${classes.arrowContainer} ${(hasScrolled) ? classes.disappear : ''}`} visibleFrom='lg' m={'1em'}>
+        <Anchor href='#about' className={`${classes.arrowContainer} ${(hasScrolled) ? classes.disappear : ''}`} visibleFrom='lg' m={'1rem'}>
             <FaArrowCircleDown className={`${classes.downArrow} `}/>
         </Anchor>
     );
