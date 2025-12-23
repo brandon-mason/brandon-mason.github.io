@@ -32,10 +32,11 @@
     width: 25%;
     margin: 0 auto;
     display: block;
+    max-width: 15rem;
 
     @media only screen and (max-width: $mantine-breakpoint-xs) {
         flex-basis: 25%;
-        width: 40vw;
+        /* width: 40vw; */
         margin-block: 1rem
     }
     @media only screen and (min-width: $mantine-breakpoint-xs) {
@@ -43,7 +44,7 @@
         margin-inline: 1rem
     }
     @media only screen and (min-width: $mantine-breakpoint-md) {
-        width: 20vw;
+        /* width: 20vw; */
     }
 }
 
@@ -70,7 +71,7 @@
 
 .techList {
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 1.25rem;
     max-width: max-content;
     margin: 0 auto;
 
