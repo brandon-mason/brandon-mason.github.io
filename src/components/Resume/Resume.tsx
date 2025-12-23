@@ -11,7 +11,7 @@ const Resume = forwardRef<MantineComponent<any>, ResumeProps>((props, resumeRef)
     return (
         <Container pt={`calc(${props.headerHeight}px + 1vh`} px={0} mx={0} ref={resumeRef} className='resume-container' classNames={{root: classes.resumeRoot}}>
             <Title order={2} className='section-header'>Resume</Title>
-            <Anchor className='linkText' href='Brandon_Mason.pdf' target='_blank'>
+            <Anchor className='linkText' href='Brandon_Mason.pdf' target=''>
                 PDF Link
                 <LuExternalLink className='externalLinkSvg'/>
             </Anchor>

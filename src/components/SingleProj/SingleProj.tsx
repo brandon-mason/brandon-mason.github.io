@@ -57,13 +57,13 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                         {techList}
                     </Grid>
                     <Group className={classes.projectLinks}>
-                        <a href={props.github} target="_blank" rel="noreferrer" className={classes.projectLink}>
+                        <a href={props.github} target="" rel="noreferrer" className={classes.projectLink}>
                             <span>
                             <SiGithub className={classes.projectLinkSvg}/>
                             </span>
                         </a>
                         <Space/>
-                        {(props.deployed) ? <a href={props.deployed} target="_blank" rel="noreferrer" className={classes.projectLink}>
+                        {(props.deployed) ? <a href={props.deployed} target="" rel="noreferrer" className={classes.projectLink}>
                             <span>
                                 <LuExternalLink className={classes.projectLinkSvg} />
                             </span>

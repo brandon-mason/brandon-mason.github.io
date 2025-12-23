@@ -35,8 +35,8 @@ const Home = forwardRef<MantineComponent<any>, HomeProps>((props, homeRef) => {
                     I graduated from Texas State University in December of 2025 with a <strong>Bachelor of Science in Computer Science</strong>.
                     I am currently employed at University Federal Credit Union as an Application Developer working on their web banking application.
                     </Text>
-                    <Text classNames={{root: classes.resumeRoot}} > Take a look at my <Anchor className='linkText' href='Resume.pdf' target='_blank'>resume<LuExternalLink className='externalLinkSvg'/></Anchor>,</Text>
-                    <Text classNames={{root: classes.githubRoot}} > and explore my work on <Anchor className='linkText' href='https://github.com/brandon-mason' target='_blank'>GitHub<LuExternalLink className='externalLinkSvg'/></Anchor>.</Text>
+                    <Text classNames={{root: classes.resumeRoot}} > Take a look at my <Anchor className='linkText' href='Resume.pdf' target=''>resume<LuExternalLink className='externalLinkSvg'/></Anchor>,</Text>
+                    <Text classNames={{root: classes.githubRoot}} > and explore my work on <Anchor className='linkText' href='https://github.com/brandon-mason' target=''>GitHub<LuExternalLink className='externalLinkSvg'/></Anchor>.</Text>
                 </Box>
                 <a href={'#projects'}>
                     <Button 
