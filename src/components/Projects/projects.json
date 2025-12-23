@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Recordable Piano",
-        "description": "This is a piano app I made which mimics part of the software I use to make music. The piano can be played using a keyboard and recorded in real-time. Users can also access a cloud service to save projects.",
+        "description": "This is a piano app I made which mimics part of the software I use for music production. The piano can be played using a keyboard and recorded in real-time. Users can also access a cloud service to save projects(currently inactive).",
         "image": "project-images/piano.png",
         "technologies": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
         "github": "https://github.com/brandon-mason/piano-roll/",
@@ -11,7 +11,7 @@
     {
         "id": 2,
         "name": "OpenAI Image Gen GUI",
-        "description": "An extra credit assignment for my Object-Oriented class that generates images using Open AI's API. The assignment implementation used Java Swing and I later recreated the app using React.",
+        "description": "An extra credit assignment for my Object-Oriented programming class that generates images using Open AI's API. The assignment implementation used Java Swing and I later recreated the app using React.",
         "image": "project-images/ai-image-generators.png",
         "technologies": ["Java", "React"],
         "github": ""
