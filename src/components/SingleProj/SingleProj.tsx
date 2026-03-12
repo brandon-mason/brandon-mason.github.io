@@ -1,4 +1,4 @@
-import { Container, Divider, Flex, Grid, Group, Image, Space, Stack, Text, Title } from '@mantine/core';
+import { Box, Container, Divider, Flex, Grid, Group, Image, Space, Stack, Text, Title } from '@mantine/core';
 import React, { useState } from 'react';
 import { LuExternalLink } from "react-icons/lu";
 import { SiGithub } from "react-icons/si";
@@ -25,7 +25,7 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
     ));
     
     return (
-        <>
+        <Box>
             <Divider classNames={{label: classes.divider}} mb={'2rem'} size={1.5} labelPosition={props.isMdWidth ? 'center' : 'left'} color={'var(--mantine-color-zomp)'} 
                 label={
                     <Title order={3} className={classes.title}>{props.name}</Title>
@@ -38,7 +38,7 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                         classNames={{
                             root: classes.imgRoot,
                         }}
-                        m='auto'
+
                         fit='contain'
                     />
                 </Container>
@@ -59,19 +59,21 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                     <Group className={classes.projectLinks}>
                         <a href={props.github} target="" rel="noreferrer" className={classes.projectLink}>
                             <span>
-                            <SiGithub className={classes.projectLinkSvg}/>
+                                <SiGithub className={classes.projectLinkSvg}/>
+                                Github Repository
                             </span>
                         </a>
                         <Space/>
                         {(props.deployed) ? <a href={props.deployed} target="" rel="noreferrer" className={classes.projectLink}>
                             <span>
                                 <LuExternalLink className={classes.projectLinkSvg} />
+                                Live Demo
                             </span>
                         </a> : <></>}
                     </Group>
                 </Stack>
             </Flex>
-        </>
+        </Box>
     );
 };
 

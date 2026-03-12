@@ -2,16 +2,15 @@
     {
         "id": 1,
         "name": "Application Developer Intern",
-        "date": "June 2025 - December 2025",
+        "date": "June 2025 - Present",
         "description": [
-            "TypeScript, Angular, RxJS, SCSS, Bootstrap: Developed features for a web banking application.",
-            "Agile Collaboration: Participated in sprint planning, task management, and daily stand-ups.",
-            "WAI-ARIA & Responsive Design: Ensured cross-browser compatibility and accessibility.",
-            "Refactoring: Updated legacy components for maintainability and scalability.",
-            "Design Patterns: Created reusable components and service patterns.",
-            "Code Quality: Contributed to code reviews, testing, and documentation.",
-            "Jest Testing: Wrote and maintained unit tests for reliability.",
-            "Figma Integration: Converted UX designs into responsive, accessible UI components."
+            "Developed features for a web banking application using TypeScript, Angular, RxJS, SCSS, and Bootstrap.",
+            "Built reusable UI components and implemented service-based architecture patterns for scalability.",
+            "Refactored legacy components to improve maintainability and performance.",
+            "Implemented responsive, accessible interfaces using WAI-ARIA and cross-browser compatibility practices.",
+            "Wrote and maintained unit tests with Jest and participated in code reviews to ensure code quality.",
+            "Translated Figma designs into responsive, production-ready UI components while collaborating in Agile sprints."
+
         ],
         "technologies": ["TypeScript", "Angular", "RxJS", "HTML", "SCSS", "Node.js"]
     }

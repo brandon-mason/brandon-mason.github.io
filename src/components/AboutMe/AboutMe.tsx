@@ -53,10 +53,8 @@ const AboutMe = forwardRef<MantineComponent<any>, AboutMeProps>((props, aboutRef
             <Flex align='flex-start' className={classes.section}>
                 <Stack className={classes.infoSection}>
                     <Text>
-                        Hi, my I'm Brandon and I'm a senior Computer Science student at Texas State University graduating December of 2025. I'm constantly seeking opportunities 
-                        to expand my knowledge and skills in areas that interest me.
-                        <br/><br/>
-                        I'm currently looking for a full-time software engineering position starting in 2026.
+                        I'm a software developer from Austin, Texas that primarily has experience with Angular and React. Even though much of my 
+                        experience is in front-end development, I'm still early in my career so I'm open to learning anything I can.
                     </Text>
                     <Container className={classes.listContainer} visibleFrom='sm'>
                         <Text className={classes.listContText} style={{textAlign: 'center'}}>Here are a few of the technologies that I'm proficient in:</Text>

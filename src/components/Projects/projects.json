@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "name": "Recordable Piano",
-        "description": "This is a piano app I made which mimics part of the software I use for music production. The piano can be played using a keyboard and recorded in real-time. Users can also access a cloud service to save projects(currently inactive).",
+        "name": "Piano Sequencer Web App",
+        "description": "A browser-based piano sequencer inspired by digital audio workstations (DAWs). Users can compose music directly in the browser using an interactive piano and timeline-based MIDI editor.",
         "image": "project-images/piano.png",
         "technologies": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
         "github": "https://github.com/brandon-mason/piano-roll/",
@@ -10,16 +10,16 @@
     },
     {
         "id": 2,
-        "name": "OpenAI Image Gen GUI",
-        "description": "An extra credit assignment for my Object-Oriented programming class that generates images using Open AI's API. The assignment implementation used Java Swing and I later recreated the app using React.",
+        "name": "AI Image Generation Interface",
+        "description": "An interface for generating AI images from text prompts with a focus on responsive UI and smooth user interaction. It is implemented in both Java and React",
         "image": "project-images/ai-image-generators.png",
         "technologies": ["Java", "React"],
-        "github": ""
+        "github": "https://github.com/brandon-mason/OpenAI-Image-Gen-Java"
     },
     {
         "id": 3,
-        "name": "Blog Website",
-        "description": "A blog website with a full CMS connected to an SQL server. User's can make accounts allowing them to like, comment, and subscribe to email notifications. Currently in development.",
+        "name": "Blog Platform",
+        "description": "A full-stack blog platform designed to support dynamic content, user interaction, and automated background tasks.",
         "image": "project-images/blab-times.png",
         "technologies": ["Astro", "Strapi", "React"],
         "github": "https://github.com/brandon-mason/blog-astro-strapi",

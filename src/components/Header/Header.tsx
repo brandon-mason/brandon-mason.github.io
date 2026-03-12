@@ -15,11 +15,11 @@ interface HeaderProps {
     ref: React.MutableRefObject<any>;
     scrollState: boolean;
     refObj: {
-        Home: React.MutableRefObject<any>;
-        About: React.MutableRefObject<any>;
-        Experience: React.MutableRefObject<any>;
-        Projects: React.MutableRefObject<any>;
-        Resume: React.MutableRefObject<any>;
+        Home?: React.MutableRefObject<any>;
+        About?: React.MutableRefObject<any>;
+        Experience?: React.MutableRefObject<any>;
+        Projects?: React.MutableRefObject<any>;
+        Resume?: React.MutableRefObject<any>;
     };
     scrollIntoView: (ref: React.MutableRefObject<any>) => void;
 }
@@ -32,8 +32,8 @@ const Header = forwardRef<MantineComponent<any>, HeaderProps>((props, headerRef)
         { link: '/#about', label: 'About Me', ref: props.refObj.About, class: "about-me" },
         { link: '/#experience', label: 'Experience', ref: props.refObj.Experience, class: "experience" },
         { link: '/#projects', label: 'Projects', ref: props.refObj.Projects, class: "projects" },
-        { link: 'Resume.pdf', label: 'Resume', class: "resume-link", target: '' },
-        { link: '/#resume', label: 'Resume', ref: props.refObj.Resume, class: "resume" },
+        // { link: 'Resume.pdf', label: 'Resume', class: "resume-link", target: '' },
+        // { link: '/#resume', label: 'Resume', ref: props.refObj.Resume, class: "resume" },
         // { link: '/#contact', label: 'Contact Me', class: "contact" },
     ];
 

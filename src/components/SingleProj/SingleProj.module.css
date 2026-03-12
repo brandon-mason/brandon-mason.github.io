@@ -13,11 +13,11 @@
 }
 
 .projInfo {
-    @media only screen and (max-width: $mantine-breakpoint-md) {
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
         flex-direction: column;
         justify-content: space-between;
     }
-    @media only screen and (min-width: $mantine-breakpoint-md) {
+    @media only screen and (min-width: $mantine-breakpoint-sm) {
         flex-direction: row;
     }
     width: 100%;
@@ -60,7 +60,10 @@
         margin-top: 0;
     }
     @media only screen and (min-width: $mantine-breakpoint-sm) {
-        max-width: 65%;
+        max-width: 55%;
+    }
+    @media only screen and (min-width: $mantine-breakpoint-md) {
+        max-width: 40%;
     }
     @media only screen and (min-width: $mantine-breakpoint-lg) {
         flex: 4;

@@ -18,7 +18,7 @@ const WholePage: React.FC = () => {
 	const aboutRef = useRef<MantineComponent<any>>(null);
 	const experienceRef = useRef<MantineComponent<any>>(null);
 	const projectRef = useRef<MantineComponent<any>>(null);
-	const resumeRef = useRef<MantineComponent<any>>(null);
+	// const resumeRef = useRef<MantineComponent<any>>(null);
 	const buttonRef = useRef<MantineComponent<any>>(null);
 
 	const { height: vpHeight, width: vpWidth } = useViewportSize();
@@ -31,7 +31,7 @@ const WholePage: React.FC = () => {
 		"About":aboutRef,
 		"Experience":experienceRef,
 		"Projects":projectRef,
-		"Resume":resumeRef,
+		// "Resume":resumeRef,
 	};
 
 	const scrollIntoView = (ref: React.MutableRefObject<any>) => {
@@ -65,7 +65,7 @@ const WholePage: React.FC = () => {
 					<AboutMe ref={refObj.About} headerHeight={headerHeight} vpHeight={vpHeight} isMdWidth={isMdWidth}/>
 					<Experience ref={refObj.Experience} headerHeight={headerHeight} isMdWidth={isMdWidth} vpHeight={vpHeight}/>
 					<Projects ref={refObj.Projects} headerHeight={headerHeight} isMdWidth={isMdWidth} vpHeight={vpHeight}/>
-					<Resume ref={refObj.Resume} headerHeight={headerHeight}/>
+					{/* <Resume ref={refObj.Resume} headerHeight={headerHeight}/> */}
 				</Container>
 			</ScrollArea>
 			<ScrollArrow scrollState={scrollState}/>
