@@ -4,7 +4,7 @@
         "name": "Piano Sequencer Web App",
         "description": "A browser-based piano sequencer inspired by digital audio workstations (DAWs). Users can compose music directly in the browser using an interactive piano and timeline-based MIDI editor.",
         "image": "project-images/piano.png",
-        "technologies": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
+        "technologies": ["TypeScript", "React", "Express", "MongoDB"],
         "github": "https://github.com/brandon-mason/piano-roll/",
         "deployed": "https://piano-roll.vercel.app/"
     },

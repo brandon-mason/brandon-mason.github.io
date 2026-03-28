@@ -2,7 +2,7 @@ import AboutMe from '@/components/AboutMe/AboutMe';
 import Experience from '@/components/Experience/Experience';
 import Header from '@/components/Header/Header';
 import Projects from '@/components/Projects/Projects';
-import Resume from '@/components/Resume/Resume';
+// import Resume from '@/components/Resume/Resume';
 import ScrollArrow from '@/components/ScrollArrow/ScrollArrow';
 import { Container, MantineComponent, ScrollArea } from '@mantine/core';
 import { useElementSize, useHash, useMediaQuery, useViewportSize } from '@mantine/hooks';

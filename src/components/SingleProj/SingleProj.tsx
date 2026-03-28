@@ -1,7 +1,6 @@
 import { Box, Container, Divider, Flex, Grid, Group, Image, Space, Stack, Text, Title } from '@mantine/core';
 import React, { useState } from 'react';
-import { LuExternalLink } from "react-icons/lu";
-import { SiGithub } from "react-icons/si";
+import { LuExternalLink, LuGithub } from "react-icons/lu";
 import classes from './SingleProj.module.css';
 
 interface SingleProjProps { 
@@ -59,7 +58,7 @@ const SingleProj: React.FC<SingleProjProps> = (props) => {
                     <Group className={classes.projectLinks}>
                         <a href={props.github} target="" rel="noreferrer" className={classes.projectLink}>
                             <span>
-                                <SiGithub className={classes.projectLinkSvg}/>
+                                <LuGithub className={classes.projectLinkSvg}/>
                                 Github Repository
                             </span>
                         </a>

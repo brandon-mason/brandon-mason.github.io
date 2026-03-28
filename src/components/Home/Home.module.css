@@ -14,10 +14,6 @@
     color: var(--mantine-color-mint);
 }
 
-.resumeRoot {
-    line-height: 2.3;
-}
-
 .button {
     opacity: 1;
     transition: opacity .09s ease-in-out;
@@ -28,10 +24,14 @@
     opacity: 0.8;
 }
 
-.resumeRoot, .githubRoot {
+.linkedinRoot, .githubRoot {
     line-height: 0.3;
 }
 
-.resumeRoot {
+.linkedinRoot {
     margin-top: 1rem;
+}
+
+.resumeRoot, svg {
+    margin-inline-start: 0.5rem
 }
